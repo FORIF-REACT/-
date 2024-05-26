@@ -7,7 +7,7 @@ import {
   ListboxOption,
   Transition,
 } from "@headlessui/react";
-import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 interface Item<T> {
   id: number;
@@ -38,16 +38,16 @@ export default function Select<T>(props: Props<T>) {
     <Listbox value={selected} onChange={selectItem}>
       {({ open }) => (
         <>
-          <Label className="block text-sm font-medium leading-6 text-gray-900">
+          <Label className="block font-sans text-base font-medium leading-6 text-gray-900">
             {props.label}
           </Label>
           <div className="relative mt-2">
-            <ListboxButton className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6">
+          <ListboxButton className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6">
               <span className="flex items-center">
-                <span className="ml-3 block truncate">{selected.name}</span>
+                <span className="ml-3 block truncate font-sans text-base">{selected.name}</span>
               </span>
               <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
-                <ChevronUpDownIcon
+                <ChevronDownIcon
                   className="h-5 w-5 text-gray-400"
                   aria-hidden="true"
                 />
@@ -67,35 +67,24 @@ export default function Select<T>(props: Props<T>) {
                     key={item.id}
                     className={({ active }) =>
                       classNames(
-                        active ? "bg-indigo-600 text-white" : "text-gray-900",
+                        active ? "bg-primary text-white" : "text-gray-900",
                         "relative cursor-default select-none py-2 pl-3 pr-9"
                       )
                     }
                     value={item}
                   >
-                    {({ selected, active }) => (
+                    {({ selected }) => (
                       <>
                         <div className="flex items-center">
                           <span
                             className={classNames(
-                              selected ? "font-semibold" : "font-normal",
-                              "ml-3 block truncate"
+                              selected ? "font-bold" : "font-normal",
+                              "ml-3 block truncate font-sans text-base"
                             )}
                           >
                             {item.name}
                           </span>
                         </div>
-
-                        {selected ? (
-                          <span
-                            className={classNames(
-                              active ? "text-white" : "text-indigo-600",
-                              "absolute inset-y-0 right-0 flex items-center pr-4"
-                            )}
-                          >
-                            <CheckIcon className="h-5 w-5" aria-hidden="true" />
-                          </span>
-                        ) : null}
                       </>
                     )}
                   </ListboxOption>
