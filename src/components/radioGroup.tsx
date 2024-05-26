@@ -18,16 +18,16 @@ export default function RadioGroup<T>(props: Props<T>) {
   const [selected, setSelected] = useState(items[0])
 
   return (
-    <HeadlessRadioGroup value={selected} onChange={setSelected} aria-label="Server size">
+    <HeadlessRadioGroup value={selected} onChange={setSelected} className="flex flex-row gap-8">
       {items.map((item) => (
         <Field key={item.id} className="flex items-center gap-2">
           <Radio
             value={item.value}
-            className="group flex size-5 items-center justify-center rounded-full border bg-white data-[checked]:bg-blue-400"
+            className="group flex size-5 items-center justify-center rounded-full border-2 border-slate-200 bg-white"
           >
-            <span className="invisible size-2 rounded-full bg-white group-data-[checked]:visible" />
+            <span className="invisible size-2 rounded-full bg-black group-data-[checked]:visible" />
           </Radio>
-          <Label>{item.name}</Label>
+          <Label className="font-sans text-base">{item.name}</Label>
         </Field>
       ))}
     </HeadlessRadioGroup>
