@@ -15,6 +15,7 @@ interface Item<T> {
 }
 
 interface Props<T> {
+  className?: string;
   items: Item<T>[];
   onSelectItem: (selected: T) => void;
 }
@@ -36,8 +37,8 @@ export default function Select<T>(props: Props<T>) {
     <Listbox value={selected} onChange={selectItem}>
       {({ open }) => (
         <>
-          <div className="relative mt-2">
-          <ListboxButton className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6">
+          <div className={`relative w-[366px] h-[40px] font-['Noto_Sans_KR'] ${props.className}`}>
+          <ListboxButton className="relative w-full h-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6">
               <span className="flex items-center">
                 <span className="ml-3 block truncate font-sans text-base">{selected.name}</span>
               </span>

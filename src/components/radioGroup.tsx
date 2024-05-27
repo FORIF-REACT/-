@@ -4,11 +4,11 @@ import { useState } from 'react'
 interface Item<T> {
   id: number;
   name: string;
-  // description?: string;
   value: T;
 }
 
 interface Props<T> {
+  className?: string;
   label: string;
   items: Item<T>[];
 }
@@ -18,7 +18,7 @@ export default function RadioGroup<T>(props: Props<T>) {
   const [selected, setSelected] = useState(items[0])
 
   return (
-    <HeadlessRadioGroup value={selected} onChange={setSelected} className="flex flex-row gap-8">
+    <HeadlessRadioGroup value={selected} onChange={setSelected} className={`flex flex-row gap-8 ${props.className}`}>
       {items.map((item) => (
         <Field key={item.id} className="flex items-center gap-2">
           <Radio
