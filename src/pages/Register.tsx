@@ -49,31 +49,27 @@ export default function Register() {
               </span>
             </FormContent>
             <FormContent label="닉네임">
-              <Input className="" placeholder="김한양"></Input>
+              <Input placeholder="김한양"></Input>
             </FormContent>
             <FormContent label="성별">
               <RadioGroup<string>
-                className=""
                 items={genderOptions}
               ></RadioGroup>
             </FormContent>
             <FormContent label="입학연도">
               <Select<number>
-                className=""
                 items={admissionYearItems}
                 onSelectItem={() => {}}
               ></Select>
             </FormContent>
             <FormContent label="전공">
               <Select<number>
-                className=""
                 items={majorItems}
                 onSelectItem={() => {}}
               ></Select>
             </FormContent>
             <FormContent label="선호지역">
               <Select<number>
-                className="h-[40px]"
                 items={regionItems}
                 onSelectItem={() => {}}
               ></Select>
