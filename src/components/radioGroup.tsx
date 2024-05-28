@@ -26,7 +26,7 @@ export default function RadioGroup<T>(props: Props<T>) {
           >
             <span className="invisible size-2 rounded-full bg-black group-data-[checked]:visible" />
           </Radio>
-          <Label className="font-['Noto_Sans_KR'] font-normal text-[16px]">{item.name}</Label>
+          <Label className="font-['Noto_Sans_KR'] font-normal text-[13px] align-middle">{item.name}</Label>
         </Field>
       ))}
     </HeadlessRadioGroup>

@@ -24,71 +24,68 @@ export default function Register() {
     { id: 1, name: "서울 공과대학 기계공학부", value: 12 },
     { id: 2, name: "서울 공과대학 산업공학과", value: 15 },
     { id: 3, name: "서울 공과대학 컴퓨터소프트웨어학부", value: 32 },
-  ]
+  ];
 
   const regionItems = [
     { id: 0, name: "서울특별시 성동구", value: 23 },
     { id: 1, name: "서울특별시 양천구", value: 12 },
     { id: 2, name: "서울특별시 광진구", value: 15 },
     { id: 3, name: "서울특별시 강동구", value: 32 },
-  ]
+  ];
   return (
     <>
-      <div className="w-[1100px] h-auto flex flex-col font-['Noto_Sans_KR']">
-        <div className="mt-[75px] mb-[116px] flex justify-center align-middle">
+      <div className="w-[1100px] h-auto px-[350px] flex flex-col font-['Noto_Sans_KR']">
+        <div className="mt-[75px] flex justify-center align-middle">
           <span className="font-semibold text-[50px]">회원가입</span>
         </div>
-        <div className="rounded-[5px] border-[1px] border-slate-400 px-[58px] py-[71px] flex flex-col">
-          <div className="mb-[64px]">
-            <span className="font-semibold text-[30px]">기본 정보 입력</span>
-          </div>
-          <div className="flex flex-col gap-[12px]">
+        <div className="my-[43px] px-[8px]">
+          <span className="font-semibold text-[20px]">기본 정보 입력</span>
+        </div>
+        <div className="flex flex-col">
+          <div className="flex flex-col gap-[23px]">
             <FormContent label="이메일">
-              <span className="font-normal text-[20px]">
+              <span className="font-normal text-[15px]">
                 testemail@hanyang.ac.kr
               </span>
             </FormContent>
             <FormContent label="닉네임">
-              <Input
-                className="w-[366px] h-[40px]"
-                placeholder="김한양"
-              ></Input>
+              <Input className="" placeholder="김한양"></Input>
             </FormContent>
             <FormContent label="성별">
               <RadioGroup<string>
-                className="h-[40px]"
+                className=""
                 items={genderOptions}
               ></RadioGroup>
             </FormContent>
             <FormContent label="입학연도">
               <Select<number>
-                className="h-[40px]"
+                className=""
                 items={admissionYearItems}
-                onSelectItem={()=>{}}
+                onSelectItem={() => {}}
               ></Select>
             </FormContent>
             <FormContent label="전공">
               <Select<number>
-                className="h-[40px]"
+                className=""
                 items={majorItems}
-                onSelectItem={()=>{}}
+                onSelectItem={() => {}}
               ></Select>
             </FormContent>
             <FormContent label="선호지역">
               <Select<number>
                 className="h-[40px]"
                 items={regionItems}
-                onSelectItem={()=>{}}
+                onSelectItem={() => {}}
               ></Select>
             </FormContent>
           </div>
         </div>
-        <div className="mt-[70px] flex justify-center">
-            <ButtonOutline
-              label="완료"
-              className="w-[187px] h-[58px] font-normal text-[18px]"
-            ></ButtonOutline>
-          </div>
+        <div className="mt-[43px] flex justify-center">
+          <ButtonOutline
+            label="완료"
+            className="w-[100px] h-[40px] rounded-[10px] font-normal text-[13px]"
+          ></ButtonOutline>
+        </div>
       </div>
     </>
   );
