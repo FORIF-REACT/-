@@ -9,7 +9,6 @@ interface Item<T> {
 
 interface Props<T> {
   className?: string;
-  label: string;
   items: Item<T>[];
 }
 
