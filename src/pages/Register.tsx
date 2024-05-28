@@ -36,10 +36,10 @@ export default function Register() {
     <>
       <div className="w-[1100px] h-auto px-[350px] flex flex-col font-['Noto_Sans_KR']">
         <div className="mt-[75px] flex justify-center align-middle">
-          <span className="font-semibold text-[50px]">회원가입</span>
+          <span className="font-semibold text-[40px] leading-[50px]">회원가입</span>
         </div>
         <div className="my-[43px] px-[8px]">
-          <span className="font-semibold text-[20px]">기본 정보 입력</span>
+          <span className="font-semibold text-[20px] leading-[20px]">기본 정보 입력</span>
         </div>
         <div className="flex flex-col">
           <div className="flex flex-col gap-[23px]">
