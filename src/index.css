@@ -19,7 +19,7 @@
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
  
-    --muted: 210 40% 96.1%;
+    --muted: 234 12% 53%;
     --muted-foreground: 215.4 16.3% 46.9%;
  
     --accent: 210 40% 96.1%;
@@ -77,9 +77,9 @@
 
 @layer components {
   .h1 {
-      @apply text-36 leading-none
+      @apply font-semibold text-36 leading-none
   }
   .h2 {
-      @apply text-24 leading-none
+      @apply font-semibold text-24 leading-none
   }
 }
