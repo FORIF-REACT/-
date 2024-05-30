@@ -1,4 +1,4 @@
-import ButtonOutline from "@/components/buttonOutline";
+import Button from "@/components/ui/button";
 
 export default function Login() {
   const name = "닉네임";
@@ -20,14 +20,12 @@ export default function Login() {
           </span>
         </div>
         <div className="flex flex-col gap-[15px]">
-          <ButtonOutline
-            label="수업 개설하기"
-            className="w-full h-[50px] border-[3px] rounded-[5px] font-normal text-[20px]"
-          ></ButtonOutline>
-          <ButtonOutline
-            label="과외 신청하기"
-            className="w-full h-[50px] border-[3px] rounded-[5px] font-normal text-[20px]"
-          ></ButtonOutline>
+          <Button variant="default" size="lg">
+            수업 개설하기
+          </Button>
+          <Button variant="default" size="lg">
+            과외 신청하기
+          </Button>
         </div>
       </div>
     </>

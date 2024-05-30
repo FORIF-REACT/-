@@ -1,5 +1,5 @@
 import FormContent from "@/components/formContent";
-import ButtonOutline from "@/components/buttonOutline";
+import Button from "@/components/ui/button";
 import Select from "@/components/select";
 import Textarea from "@/components/textarea";
 
@@ -113,10 +113,9 @@ export default function Register() {
           </div>
         </div>
         <div className="mt-[43px] flex justify-center">
-          <ButtonOutline
-            label="완료"
-            className="w-[100px] h-[40px] rounded-[10px] font-normal text-[13px]"
-          ></ButtonOutline>
+          <Button variant="default" size="default">
+            완료
+          </Button>
         </div>
       </div>
     </>
