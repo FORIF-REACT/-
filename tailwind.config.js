@@ -73,6 +73,29 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    fontFamily: {
+      sans: "Noto Sans, Noto Sans KR, serif",
+      logo: "Orelega One, serif"
+    },
+    fontSize: {
+      10: "10px",
+      12: "12px",
+      14: "14px",
+      16: "16px",
+      20: "20px",
+      24: "24px",
+      36: "36px",
+      40: "40px",
+    },
+    lineHeight: {
+      none: '1',
+      13: "13px",
+      20: "20px",
+      24: "24px",
+      40: "40px",
+      42: "42px",
+      60: "60px",
+    }
   },
   plugins: [require("tailwindcss-animate")],
 };
