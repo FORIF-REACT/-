@@ -17,6 +17,8 @@ const navigation = [
   { name: "평가하기", href: "#", current: false },
 ];
 
+const name = "닉네임";
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
@@ -25,7 +27,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="w-full h-[60px] flex items-center justify-center bg-white border-b-2 border-[#94A3B8]"
+      className="w-full h-[60px] flex items-center justify-center bg-white border-b-2 border-[#94A3B8]/30"
     >
       {({ open }) => (
         <>
@@ -41,9 +43,14 @@ export default function Navbar() {
               )}
             </DisclosureButton>
           </div>
-          <div className="flex flex-shrink-0 items-center">
-            <h1 className="absolute left-24 font-logo text-40">Unitto</h1>
-          </div>
+          <button
+            className="flex flex-shrink-0 items-center"
+            onClick={() => {}}
+          >
+            <h1 className="absolute left-24 font-logo text-40 text-accent">
+              Unitto
+            </h1>
+          </button>
           <div className="mx-auto max-w-[1100px] w-page px-page flex flex-row items-center justify-between">
             {navigation.map((item) => (
               <a
@@ -59,18 +66,37 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-          <div className="absolute right-0 flex items-center pr-2">
-            <button
+          <div className="absolute right-24 flex items-center">
+            {/* <button
               type="button"
-              className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              className="relative rounded-full bg-white p-1 text-primary/80 hover:bg-primary/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary"
             >
               <span className="absolute -inset-1.5" />
               <span className="sr-only">View notifications</span>
               <BellIcon className="h-6 w-6" aria-hidden="true" />
+            </button> */}
+
+            <button
+              className="relative ml-3 flex flex-row gap-2 items-center"
+              onClick={() => {}}
+              >
+              <div className="relative flex rounded-full bg-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-primary">
+                <img
+                  className="h-8 w-8 rounded-full"
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt="Profile"
+                  />
+              </div>
+              <div className="text-16 text-[#44475D]">
+                <p>{name} 님</p>
+              </div>
+            </button>
+            <button className="relative ml-3 text-16 font-semibold">
+              LOG OUT
             </button>
 
             {/* Profile dropdown */}
-            <Menu as="div" className="relative ml-3">
+            {/* <Menu as="div" className="relative ml-3">
               <div>
                 <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="absolute -inset-1.5" />
@@ -132,7 +158,7 @@ export default function Navbar() {
                   </MenuItem>
                 </MenuItems>
               </Transition>
-            </Menu>
+            </Menu> */}
           </div>
 
           <DisclosurePanel className="sm:hidden">
