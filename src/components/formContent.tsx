@@ -17,13 +17,13 @@ export default function FormContent({
 
   return (
     <>
-      <div className="min-h-[40px] rounded-[10px] border-[1px] border-slate-400 pl-[21px] pr-[8px] py-[8px] flex gap-[8px] items-start focus:ring-1 focus:ring-inset focus:ring-primary">
-        <div className="w-[106px] flex items-center">
-          <span className="py-[2px] font-medium text-[13px] text-[#44475D] leading-[20px]">
+      <div className="min-h-10 rounded-lg border-2 border-slate-400 pl-6 pr-6 py-1.5 flex gap-2 items-stretch focus:ring-1 focus:ring-inset focus:ring-primary">
+        <div className="w-28 flex items-start">
+          <span className="mt-0.5 font-medium text-12 text-[#44475D] leading-20">
             {label}
           </span>
         </div>
-        <div className="flex-1 h-full flex items-center">{children}</div>
+        <div className="flex-1 flex flex-row justify-between items-stretch">{children}</div>
       </div>
     </>
   );

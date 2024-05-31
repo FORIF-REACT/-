@@ -22,11 +22,11 @@ export default function RadioGroup<T>(props: Props<T>) {
         <Field key={item.id} className="flex items-center gap-2">
           <Radio
             value={item.value}
-            className="group flex size-[13px] items-center justify-center rounded-full border-[1px] border-[#CBD5E1] bg-white"
+            className="group flex size-3 items-center justify-center rounded-full ring-1 ring-[#CBD5E1] bg-white"
           >
             <span className="invisible size-2 rounded-full bg-black group-data-[checked]:visible" />
           </Radio>
-          <Label className="font-['Noto_Sans_KR'] font-normal text-[13px] align-middle">{item.name}</Label>
+          <Label className="font-sans font-normal text-12 align-middle">{item.name}</Label>
         </Field>
       ))}
     </HeadlessRadioGroup>

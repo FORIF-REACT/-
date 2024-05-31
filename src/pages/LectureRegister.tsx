@@ -12,8 +12,8 @@ export default function Register() {
   ];
 
   const learningFocusItems = [
-    { id: 0, name: "이론 중심", value: "theory" },
-    { id: 1, name: "기출 중심", value: "previous" },
+    { id: 0, name: "이론 위주", value: "theory" },
+    { id: 1, name: "기출 위주", value: "previous" },
   ];
 
   const learningTypeItems = [
@@ -33,7 +33,7 @@ export default function Register() {
 
   const timeItems = [
     //picker로 대체 필요
-    { id: 0, name: "18:00", value: "18:00" },
+    { id: 0, name: "18시", value: "18:00" },
   ];
 
   const totalLectureCountItems = [
@@ -45,33 +45,25 @@ export default function Register() {
 
   return (
     <>
-      <div className="w-[1100px] h-auto px-[350px] flex flex-col font-['Noto_Sans_KR']">
-        <div className="mt-[75px] flex justify-center align-middle">
-          <span className="font-semibold text-[40px] leading-[50px]">
-            수업 개설하기
-          </span>
+      <div className="w-page h-auto px-page flex flex-col font-sans">
+        <div className="mt-24 flex justify-center align-middle">
+          <h1 className="h1">수업 개설하기</h1>
         </div>
-        <div className="mt-[70px] mb-[40px] px-[8px]">
-          <div>
-            <span className="font-semibold text-[20px] leading-[20px]">
-              멘토 정보 입력
-            </span>
-          </div>
-          <div>
-            <span className="font-normal text-[13px] leading-[20px]">
-              멘토 정보를 입력하지 않으면 멘토 목록에 등록되지 않습니다.
-            </span>
-          </div>
+        <div className="mt-11 mb-5">
+          <h2 className="h2">멘토 정보 입력</h2>
+          <p className="mt-2 font-normal text-12 leading-20">
+            멘토 정보를 입력하지 않으면 멘토 목록에 등록되지 않습니다.
+          </p>
         </div>
         <div className="flex flex-col">
-          <div className="flex flex-col gap-[23px]">
+          <div className="flex flex-col gap-4">
             <FormContent label="강의 과목">
               <Select<number>
                 items={subjectItems}
                 onSelectItem={() => {}}
               ></Select>
             </FormContent>
-            <FormContent label="강의 방식">
+            <FormContent label="강의 중점">
               <Select<string>
                 items={learningFocusItems}
                 onSelectItem={() => {}}
@@ -85,23 +77,32 @@ export default function Register() {
             </FormContent>
             <FormContent label="강의 내용">
               <Textarea
-                rows={4}
+                rows={2}
                 className="items-start"
                 placeholder={
                   "강의 내용을 자유롭게 작성해주세요.\n예) 공업수학1 이론을 바탕으로한 기출 문제 풀이\n별도의 문제 풀이와 질의 응답"
                 }
               ></Textarea>
             </FormContent>
-            <FormContent label="선호 요일 및 시간대">
-              <div className="w-full flex flex-row gap-[8px]">
-                <Select<string>
-                  items={dayOfTheWeekItems}
-                  onSelectItem={() => {}}
-                ></Select>
-                <Select<string>
-                  items={timeItems}
-                  onSelectItem={() => {}}
-                ></Select>
+            <FormContent label="선호 요일 - 시간대">
+              <div className="w-full flex flex-row gap-4">
+                <div className="max-w-20">
+                  <Select<string>
+                    items={dayOfTheWeekItems}
+                    onSelectItem={() => {}}
+                  ></Select>
+                </div>
+                <div className="flex-1 flex flex-row gap-2">
+                  <Select<string>
+                    items={timeItems}
+                    onSelectItem={() => {}}
+                  ></Select>
+                  <label> ~ </label>
+                  <Select<string>
+                    items={timeItems}
+                    onSelectItem={() => {}}
+                  ></Select>
+                </div>
               </div>
             </FormContent>
             <FormContent label="총 수업 횟수">
@@ -112,7 +113,7 @@ export default function Register() {
             </FormContent>
           </div>
         </div>
-        <div className="mt-[43px] flex justify-center">
+        <div className="mt-11 flex justify-center">
           <Button variant="default" size="default">
             완료
           </Button>

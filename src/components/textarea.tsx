@@ -11,7 +11,7 @@ interface Props {
             name="value"
             id="value"
             rows={rows}
-            className="block w-full h-full rounded-md border-0 px-[8px] py-[2px] text-gray-900 ring-1 ring-inset ring-gray-300 text-[13px] leading-[20px] placeholder:text-gray-400 resize-none focus:ring-1 focus:ring-inset focus:ring-primary"
+            className="block w-full h-full rounded-md border-0 px-2 py-1 text-gray-900 ring-1 ring-inset ring-gray-300 text-12 leading-20 placeholder:text-gray-400 resize-none focus:ring-1 focus:ring-inset focus:ring-primary"
             placeholder={placeholder}
           />
         </div>

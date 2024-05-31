@@ -34,27 +34,25 @@ export default function Register() {
   ];
   return (
     <>
-      <div className="w-[1100px] h-auto px-[350px] flex flex-col font-['Noto_Sans_KR']">
-        <div className="mt-[75px] flex justify-center align-middle">
-          <span className="font-semibold text-[40px] leading-[50px]">회원가입</span>
+      <div className="w-page h-auto px-page flex flex-col font-sans">
+        <div className="mt-24 flex justify-center align-middle">
+          <h1 className="h1">회원가입</h1>
         </div>
-        <div className="my-[43px] px-[8px]">
-          <span className="font-semibold text-[20px] leading-[20px]">기본 정보 입력</span>
+        <div className="mt-11 mb-11">
+          <h2 className="h2">기본 정보 입력</h2>
         </div>
         <div className="flex flex-col">
-          <div className="flex flex-col gap-[23px]">
+          <div className="flex flex-col gap-5">
             <FormContent label="이메일">
-              <span className="font-normal text-[15px]">
-                testemail@hanyang.ac.kr
-              </span>
+              <div className="flex items-center font-normal text-12">
+                <p>testemail@hanyang.ac.kr</p>
+              </div>
             </FormContent>
             <FormContent label="닉네임">
               <Input placeholder="김한양"></Input>
             </FormContent>
             <FormContent label="성별">
-              <RadioGroup<string>
-                items={genderOptions}
-              ></RadioGroup>
+              <RadioGroup<string> items={genderOptions}></RadioGroup>
             </FormContent>
             <FormContent label="입학연도">
               <Select<number>
@@ -75,11 +73,11 @@ export default function Register() {
               ></Select>
             </FormContent>
           </div>
-        </div>
-        <div className="mt-[43px] flex justify-center">
-          <Button variant="default" size="default">
-            완료
-          </Button>
+          <div className="mt-11 flex justify-center">
+            <Button variant="default" size="default">
+              완료
+            </Button>
+          </div>
         </div>
       </div>
     </>

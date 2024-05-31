@@ -36,12 +36,11 @@ export default function Select<T>(props: Props<T>) {
   return (
     <Listbox value={selected} onChange={selectItem}>
       {({ open }) => (
-        <>
           <div
-            className={`relative w-full h-full font-['Noto_Sans_KR'] ${props.className}`}
+            className={`relative w-full h-full min-h-6 font-sans ${props.className}`}
           >
-            <ListboxButton className="relative w-full h-full pl-[8px] pr-[8px] py-auto cursor-default rounded-[6px] bg-white text-left text-[#13131B] ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6 flex items-center">
-              <span className="w-full flex items-center truncate font-normal text-[13px]">
+            <ListboxButton className="relative w-full h-full px-2 py-auto flex flex-row justify-stretch items-center cursor-default rounded-md bg-white text-left text-[#13131B] ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+              <span className="w-full flex items-center truncate font-normal text-12">
                   {selected.name}
               </span>
               <span className="pointer-events-none flex items-center">
@@ -59,14 +58,14 @@ export default function Select<T>(props: Props<T>) {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <ListboxOptions className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+              <ListboxOptions className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 {items.map((item) => (
                   <ListboxOption
                     key={item.id}
                     className={({ active }) =>
                       classNames(
                         active ? "bg-primary text-white" : "text-gray-900",
-                        "relative cursor-default select-none h-[24px] pl-[8px] pr-[8px] py-auto flex items-center"
+                        "relative cursor-default select-none h-6 px-2 py-auto flex items-center"
                       )
                     }
                     value={item}
@@ -77,7 +76,7 @@ export default function Select<T>(props: Props<T>) {
                           <span
                             className={classNames(
                               selected ? "font-bold" : "font-normal",
-                              "pl-2 block truncate text-[13px]"
+                              "pl-2 block truncate text-12"
                             )}
                           >
                             {item.name}
@@ -90,7 +89,6 @@ export default function Select<T>(props: Props<T>) {
               </ListboxOptions>
             </Transition>
           </div>
-        </>
       )}
     </Listbox>
   );

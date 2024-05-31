@@ -3,28 +3,27 @@ import Button from "@/components/ui/button";
 export default function Login() {
   return (
     <>
-      <div className="w-[1100px] h-auto px-[350px] flex flex-col font-['Noto_Sans_KR']">
-        <div className="mt-[75px] flex justify-center align-middle">
-          <span className="font-semibold text-[40px] leading-[50px]">로그인</span>
+      <div className="w-page h-auto px-page flex flex-col font-sans">
+        <div className="mt-24 flex justify-center align-middle">
+          <h1 className="h1">로그인</h1>
         </div>
-        <div className="my-[54px] px-[8px]">
-          <span className="font-semibold text-[20px] line">
+        <div className="mt-11">
+          <p className="font-semibold text-20 leading-40">
             안녕하세요,{" "}
-            <span className="font-['Orelega_One'] font-normal text-[40px]">
+            <span className="font-logo font-normal text-40 leading-60">
               Unitto
             </span>
             입니다.
-          </span>
-          <br />
-          <span className="font-normal text-[15px]">
+          </p>
+          <p className="font-normal text-16 leading-24">
             한양대 계정으로만 로그인 가능합니다.
-          </span>
+          </p>
         </div>
-        <div className="flex flex-col gap-[15px]">
+        <div className="mt-12 flex flex-col gap-4">
           <Button variant="default" size="lg">
             한양대 계정으로 로그인
           </Button>
-          <Button variant="filled" size="lg">
+          <Button variant="default" size="lg">
             회원가입
           </Button>
         </div>
