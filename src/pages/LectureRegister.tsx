@@ -1,6 +1,6 @@
-import FormContent from "@/components/formContent";
+import FormContent from "@/components/Signup/formContent";
 import Button from "@/components/ui/button";
-import Select from "@/components/select";
+import Select from "@/components/Signup/select";
 import Textarea from "@/components/textarea";
 
 export default function Register() {
