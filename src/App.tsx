@@ -5,6 +5,7 @@ import RegisterDone from "@/pages/RegisterDone";
 import LectureRegister from "@/pages/LectureRegister";
 import Navbar from "./components/ui/navbar";
 import Profile from "@/pages/Profile";
+import Tag from "./components/ui/Tag";
 function App() {
   return (
     <div className="h-screen w-screen flex flex-col gap-4 justify-start items-center">
@@ -14,6 +15,7 @@ function App() {
           {/* <Register /> */}
           {/* <RegisterDone></RegisterDone> */}
           {/* <LectureRegister></LectureRegister> */}
+          <Profile />
         </div>
     </div>
   );

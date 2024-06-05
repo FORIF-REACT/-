@@ -1,8 +1,8 @@
-import FormContent from "@/components/formContent";
+import FormContent from "@/components/Signup/formContent";
 import Button from "@/components/ui/button";
-import Input from "@/components/input";
-import RadioGroup from "@/components/radioGroup";
-import Select from "@/components/select";
+import Input from "@/components/Signup/input";
+import RadioGroup from "@/components/Signup/radioGroup";
+import Select from "@/components/Signup/select";
 
 export default function Register() {
   const genderOptions = [

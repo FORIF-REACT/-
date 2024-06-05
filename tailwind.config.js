@@ -101,6 +101,14 @@ module.exports = {
       40: "40px",
       42: "42px",
       60: "60px",
+    },
+    borderWidth: {
+      DEFAULT: '1px',
+      "0": '0',
+      "1": '1px',
+      "2": '2px',
+      "3": '3px',
+      "4": '4px',
     }
   },
   plugins: [require("tailwindcss-animate")],

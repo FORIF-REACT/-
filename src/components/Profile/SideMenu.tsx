@@ -2,8 +2,7 @@ interface props{
   menu1: string;
   menu2: string;
 }
-export default function SideMenu ({menu}: {menu:props}) {
-  const {menu1, menu2} = menu
+const SideMenu = ({menu1, menu2}:props) => {
   return (
       <div className="w-[89px] flex flex-col">
         <button
@@ -19,3 +18,4 @@ export default function SideMenu ({menu}: {menu:props}) {
       </div>
   )
 }
+export default SideMenu
