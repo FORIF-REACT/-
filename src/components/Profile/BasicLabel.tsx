@@ -1,12 +1,13 @@
-interface props {
+interface Props {
   title: string;
   content:string;
+  className?: string;
 }
 
-const BasicLabel = ({title, content}: props) => {
+const BasicLabel = ({title, content, className}: Props) => {
   return (
-    <div className='flex w-[360px] h-9 border-l border-b border-border justify-items-start items-center'>
-      <div className='w-[74px] ml-5 text-12 text-[44475D] font-sans'>
+    <div className={`flex w-[360px] h-9 border-l justify-items-start items-center ${className}`}>
+      <div className='w-[74px] ml-5 text-12 text-darkgray'>
         {title}
       </div>
       <div className='w-[266px] text-12 leading-20'>
