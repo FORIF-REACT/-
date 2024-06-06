@@ -97,7 +97,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ['Noto Sans', 'sans-serif'],
+      sans: ['Noto Sans', 'Noto Sans KR', 'sans-serif'],
       logo: ['Orelega One', 'sans-serif']
     },
     fontSize: {
