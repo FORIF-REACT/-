@@ -1,7 +1,7 @@
 import FormContent from "@/components/Signup/formContent";
 import Button from "@/components/ui/button";
 import Select from "@/components/Signup/select";
-import Textarea from "@/components/textarea";
+import Textarea from "@/components/Signup/textarea";
 
 export default function Register() {
   const subjectItems = [

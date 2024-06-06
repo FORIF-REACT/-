@@ -5,19 +5,22 @@ import RegisterDone from "@/pages/RegisterDone";
 import LectureRegister from "@/pages/LectureRegister";
 import Navbar from "./components/ui/navbar";
 import Profile from "@/pages/Profile";
-import Tag from "./components/ui/Tag";
+import MyProfile from "@/pages/MyProfile";
+import Main from "./pages/Main";
 function App() {
   return (
-    <div className="h-screen w-screen flex flex-col gap-4 justify-start items-center">
-        {/* <Navbar /> */}
-        <div className="max-w-[1100px] w-full mx-auto">
-          {/* <Login></Login> */}
-          {/* <Register /> */}
-          {/* <RegisterDone></RegisterDone> */}
-          {/* <LectureRegister></LectureRegister> */}
-          <Profile />
-        </div>
-    </div>
+    // <div className="h-screen w-screen flex flex-col gap-4 justify-start items-center">
+    //     {/* <Navbar /> */}
+    //     <div className="max-w-[1100px] w-full mx-auto">
+    //       {/* <Login></Login> */}
+    //       {/* <Register /> */}
+    //       {/* <RegisterDone></RegisterDone> */}
+    //       {/* <LectureRegister></LectureRegister> */}
+    //       {/* <Profile /> */}
+    //       {/* <MyProfile /> */}
+    //     </div>
+    // </div>
+      <Main />
   );
 }
 

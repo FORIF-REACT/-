@@ -51,7 +51,9 @@ module.exports = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
-        }
+        },
+        darkgray: "#44475D",
+        placeholder: "hsl(var(--placeholder))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -73,15 +75,30 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       width: {
-        page: '1100px'
+        page: '1100px',
+        480: '480px',
+        672: '672px',
+        304: '304px',
+        18: '72px',
+        160: '160px',
+      },
+      height: {
+        18: '72px',
+        160: '160px'
       },
       padding: {
         page: '350px'
+      },
+      margin: {
+        100: "100px",
+        200: "200px",
+        240: "240px",
+        360: "360px",
       }
     },
     fontFamily: {
-      sans: "Noto Sans, Noto Sans KR, serif",
-      logo: "Orelega One, serif"
+      sans: ['Noto Sans', 'sans-serif'],
+      logo: ['Orelega One', 'sans-serif']
     },
     fontSize: {
       10: "10px",
@@ -92,12 +109,14 @@ module.exports = {
       24: "24px",
       36: "36px",
       40: "40px",
+      60: "60px"
     },
     lineHeight: {
       none: '1',
       13: "13px",
       20: "20px",
       24: "24px",
+      28: "28px",
       40: "40px",
       42: "42px",
       60: "60px",

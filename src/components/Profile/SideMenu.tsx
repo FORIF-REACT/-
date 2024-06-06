@@ -1,8 +1,8 @@
-interface props{
+interface Props{
   menu1: string;
   menu2: string;
 }
-const SideMenu = ({menu1, menu2}:props) => {
+const SideMenu = ({menu1, menu2}:Props) => {
   return (
       <div className="w-[89px] flex flex-col">
         <button
