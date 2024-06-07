@@ -53,12 +53,17 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         darkgray: "#44475D",
-        placeholder: "hsl(var(--placeholder))",
+        placeholder: "#717D8D",
+        platinum: "#B7F1F9",
+        gold: "#F4E075",
+        silver: "#D0D0D0",
+        bronze: "#E6BA8F",
+        
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        sm: "calc(var(--radius) - 4px)"
       },
       keyframes: {
         "accordion-down": {
@@ -76,11 +81,14 @@ module.exports = {
       },
       width: {
         page: '1100px',
-        480: '480px',
-        672: '672px',
-        304: '304px',
         18: '72px',
         160: '160px',
+        304: '304px',
+        400: '400px',
+        480: '480px',
+        672: '672px',
+        800: '800px',
+        960: '960px',
       },
       height: {
         18: '72px',
@@ -109,6 +117,7 @@ module.exports = {
       24: "24px",
       36: "36px",
       40: "40px",
+      56: "56px",
       60: "60px"
     },
     lineHeight: {
