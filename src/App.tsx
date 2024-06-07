@@ -7,6 +7,8 @@ import Navbar from "./components/ui/navbar";
 import Profile from "@/pages/Profile";
 import MyProfile from "@/pages/MyProfile";
 import Main from "./pages/Main";
+import BasicModify from "./pages/BasicModify";
+import MentorModify from "./pages/MentorModify";
 function App() {
   return (
     // <div className="h-screen w-screen flex flex-col gap-4 justify-start items-center">
@@ -17,10 +19,12 @@ function App() {
     //       {/* <RegisterDone></RegisterDone> */}
     //       {/* <LectureRegister></LectureRegister> */}
     //       {/* <Profile /> */}
-    //       {/* <MyProfile /> */}
     //     </div>
     // </div>
       <Main />
+      // <BasicModify />
+      // <MyProfile />
+      // <MentorModify />
   );
 }
 

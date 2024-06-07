@@ -33,7 +33,7 @@ export default function Register() {
     { id: 3, name: "서울특별시 강동구", value: 32 },
   ];
   return (
-    <>
+    <> 
       <div className="w-page h-auto px-page flex flex-col font-sans">
         <div className="mt-24 flex justify-center align-middle">
           <h1 className="h1">회원가입</h1>
