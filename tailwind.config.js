@@ -58,7 +58,7 @@ module.exports = {
         gold: "#F4E075",
         silver: "#D0D0D0",
         bronze: "#E6BA8F",
-        
+        lightblue: "#FBFDFF"
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -86,6 +86,7 @@ module.exports = {
         304: '304px',
         400: '400px',
         480: '480px',
+        532: "532px",
         672: '672px',
         800: '800px',
         960: '960px',
@@ -102,41 +103,41 @@ module.exports = {
         200: "200px",
         240: "240px",
         360: "360px",
+      },
+      fontFamily: {
+        sans: ['Noto Sans', 'Noto Sans KR', 'sans-serif'],
+        logo: ['Orelega One', 'sans-serif']
+      },
+      fontSize: {
+        10: "10px",
+        12: "12px",
+        14: "14px",
+        16: "16px",
+        20: "20px",
+        24: "24px",
+        36: "36px",
+        40: "40px",
+        56: "56px",
+        60: "60px"
+      },
+      lineHeight: {
+        none: '1',
+        13: "13px",
+        20: "20px",
+        24: "24px",
+        28: "28px",
+        40: "40px",
+        42: "42px",
+        60: "60px",
+      },
+      borderWidth: {
+        DEFAULT: '1px',
+        "0": '0',
+        "1": '1px',
+        "2": '2px',
+        "3": '3px',
+        "4": '4px',
       }
-    },
-    fontFamily: {
-      sans: ['Noto Sans', 'Noto Sans KR', 'sans-serif'],
-      logo: ['Orelega One', 'sans-serif']
-    },
-    fontSize: {
-      10: "10px",
-      12: "12px",
-      14: "14px",
-      16: "16px",
-      20: "20px",
-      24: "24px",
-      36: "36px",
-      40: "40px",
-      56: "56px",
-      60: "60px"
-    },
-    lineHeight: {
-      none: '1',
-      13: "13px",
-      20: "20px",
-      24: "24px",
-      28: "28px",
-      40: "40px",
-      42: "42px",
-      60: "60px",
-    },
-    borderWidth: {
-      DEFAULT: '1px',
-      "0": '0',
-      "1": '1px',
-      "2": '2px',
-      "3": '3px',
-      "4": '4px',
     }
   },
   plugins: [require("tailwindcss-animate")],
