@@ -1,8 +1,6 @@
-import SideMenu from '@/components/Profile/SideMenu'
 import FormContent from '@/components/Signup/formContent'
 import Select from '@/components/Signup/select'
 import Footer from '@/components/ui/Footer'
-import Navbar from '@/components/ui/navbar'
 import Button from '@/components/ui/button'
 import Textarea from '@/components/Signup/textarea'
 
@@ -49,17 +47,9 @@ const BasicModify = () => {
 
   return (
     <>
-      <Navbar />
-      <div className='w-672 mx-auto mt-100 mb-200 flex justify-between'>
-          <div className='w-36 flex flex-col items-center'>
-            <h1 className='text-36 h1 mb-3'>내 프로필</h1>
-            <SideMenu menu1="기본 정보 수정" menu2="멘토 정보 수정" />
-          </div>
-
+      <div className='flex justify-center mt-100 mb-200'>
           <div className='w-480 border-1 rounded-md '>
-
             <div className='w-400 mt-12 mb-10 mx-auto '>
-              
               <h2 className='h2 text-start mb-12'>멘토 정보 수정</h2>
 
               <div className="flex flex-col">
