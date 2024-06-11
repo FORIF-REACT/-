@@ -6,13 +6,24 @@ import LectureRegister from "@/pages/LectureRegister";
 import Navbar from "./components/ui/navbar";
 import BasicModify from "./pages/Profile/BasicModify";
 import MentorModify from "./pages/Profile/MentorModify";
-import Main from "./pages/Main";
+import Main from "./pages/MainPage";
 import MyProfile from "./pages/Profile/MyProfile";
 import ProfileModal from "./components/ProfileModal";
 import Error from "./pages/Error";
 import Admin from "./pages/Admin";
 import CheckModal from "./components/CheckModal";
+import { Routes, Route, Outlet } from "react-router-dom";
 
+
+const Home = () => {
+  return (
+    <div>
+      <Navbar />
+
+      <Outlet />
+    </div>
+  )
+}
 
 function App() {
   return (
@@ -25,12 +36,17 @@ function App() {
     //     {/* <LectureRegister></LectureRegister> */}
     //   </div>
     // </div>
-    // <Main />
-    <ProfileModal />
-    // <MyProfile />
-    // <Error />
-    // <Admin />
-    // <CheckModal />
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} >
+          <Route path="main" element={<Main />} />
+          <Route path="myprofile" element={<MyProfile />} />
+          <Route path="basicmodify" element={<BasicModify />} />
+          <Route path="mentormodify" element={<MentorModify />} />
+          <Route path="admin" element={<Admin />} />       
+        </Route>
+      </Routes>
+    </div>
 
   );
 }

@@ -1,5 +1,3 @@
-import Navbar from "@/components/ui/navbar"
-import Footer from "@/components/ui/Footer"
 import ProfileComponent from "@/components/Profile/ProfileComponent"
 
 
@@ -12,7 +10,7 @@ const ProfileModal = () => {
           <span className="absolute top-2 right-3">X</span>
         </div>
         <ProfileComponent />
-      </div>
+      </div> 
 
     </div>
 

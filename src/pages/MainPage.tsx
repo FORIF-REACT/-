@@ -1,14 +1,16 @@
 import BigProfileImage from '@/components/Profile/BigProfileImage';
 import SmallProfileImage from '@/components/Profile/SmallProfileImage';
 import Footer from '@/components/ui/Footer';
-import Navbar from '@/components/ui/navbar';
+import { useState } from 'react';
 import { PiNotePencilBold, PiStudentDuotone, PiChalkboardTeacher } from "react-icons/pi";
 
  
 const Main = () => {
+  
+  const [modalOpen, setModalOpen] = useState<boolean>(false)
+
   return (
     <>
-      <Navbar />
       <div className='w-page mx-auto my-240'>
 
         <div className=' w-960 h-auto mx-auto mb-360 flex justify-between items-center '>

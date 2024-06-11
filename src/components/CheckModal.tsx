@@ -1,6 +1,3 @@
-import Footer from '@/components/ui/Footer'
-import Navbar from '@/components/ui/navbar'
-import React from 'react'
 import Button from './ui/button'
 
 const CheckModal = () => {
