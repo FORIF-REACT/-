@@ -96,7 +96,8 @@ module.exports = {
         160: '160px'
       },
       padding: {
-        page: '350px'
+        page: '350px',
+        100: '100px'
       },
       margin: {
         100: "100px",
