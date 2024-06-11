@@ -6,4 +6,4 @@ const onClickOutside = () => {
   )
 }
 
-export default onClickOutside
+export default onClickOutside  
