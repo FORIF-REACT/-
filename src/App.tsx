@@ -8,10 +8,10 @@ import BasicModify from "./pages/Profile/BasicModify";
 import MentorModify from "./pages/Profile/MentorModify";
 import Main from "./pages/Main";
 import MyProfile from "./pages/Profile/MyProfile";
-import Profile from "./pages/Profile/Profile";
+import ProfileModal from "./components/ProfileModal";
 import Error from "./pages/Error";
 import Admin from "./pages/Admin";
-import CheckModal from "./pages/CheckModal";
+import CheckModal from "./components/CheckModal";
 
 
 function App() {
@@ -23,13 +23,13 @@ function App() {
     //     {/* <Register /> */}
     //     {/* <RegisterDone></RegisterDone> */}
     //     {/* <LectureRegister></LectureRegister> */}
-    //     {/* <Profile /> */}
     //   </div>
     // </div>
     // <Main />
+    <ProfileModal />
     // <MyProfile />
     // <Error />
-    <Admin />
+    // <Admin />
     // <CheckModal />
 
   );
