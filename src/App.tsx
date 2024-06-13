@@ -8,19 +8,18 @@ import BasicModify from "./pages/Profile/BasicModify";
 import MentorModify from "./pages/Profile/MentorModify";
 import Main from "./pages/MainPage";
 import MyProfile from "./pages/Profile/MyProfile";
-import ProfileModal from "./components/ProfileModal";
 import Error from "./pages/Error";
 import Admin from "./pages/Admin";
-import CheckModal from "./components/CheckModal";
 import { Routes, Route, Outlet } from "react-router-dom";
+import Footer from "./components/ui/Footer";
 
 
 const Home = () => {
   return (
     <div>
       <Navbar />
-
       <Outlet />
+      <Footer />
     </div>
   )
 }
@@ -46,6 +45,7 @@ function App() {
           <Route path="admin" element={<Admin />} />       
         </Route>
       </Routes>
+      {/* <ProfileModal /> */}
     </div>
 
   );
