@@ -3,6 +3,15 @@ import Select from '@/components/Signup/select'
 import Footer from '@/components/ui/Footer'
 import Button from '@/components/ui/button'
 import Textarea from '@/components/Signup/textarea'
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/Dialog"
 
 const BasicModify = () => {
   
@@ -111,9 +120,26 @@ const BasicModify = () => {
                 </div>
               </div>
               <div className="mt-11 flex justify-center">
-                <Button variant="default" size="default">
-                  완료
-                </Button>
+                <Dialog>
+                  <DialogTrigger>
+                    <Button variant="default" size="default">
+                      완료
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className='w-72'>
+                    <DialogHeader>
+                      <DialogTitle>
+                        <div className='w-10 h-10 mx-auto mb-3 flex justify-center items-center rounded-full border-1 border-primary '>
+                          <p className='text-24 text-primary font-semibold'>!</p></div>
+                        <p className=''>제출 하시겠습니까?</p>
+                      </DialogTitle>
+                    </DialogHeader>
+                    <DialogClose className='w-32 mx-auto flex justify-between' >
+                      <Button variant="slateFilled" size="sm">확인</Button>
+                      <Button variant="slate" size="sm">취소</Button>
+                    </DialogClose>
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
           </div>

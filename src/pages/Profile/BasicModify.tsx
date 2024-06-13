@@ -4,6 +4,16 @@ import RadioGroup from '@/components/Signup/radioGroup'
 import Select from '@/components/Signup/select'
 import Footer from '@/components/ui/Footer'
 import Button from '@/components/ui/button'
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/Dialog"
+
 
 const BasicModify = () => {
   const genderOptions = [
@@ -37,13 +47,10 @@ const BasicModify = () => {
   return (
     <>
       <div className='flex justify-center mt-100 mb-200 '>
-          <div className='w-480 border-1 rounded-md '>
-
-            <div className='w-400 mt-12 mb-10 mx-auto '>
-              
-              <h2 className='h2 text-start mb-12'>기본 정보 수정</h2>
-
-              <div className="flex flex-col gap-5">
+        <div className='w-480 border-1 rounded-md '>
+          <div className='w-400 mt-12 mb-10 mx-auto '>
+            <h2 className='h2 text-start mb-12'>기본 정보 수정</h2>
+            <div className="flex flex-col gap-5">
               <FormContent label="이메일">
                 <div className="flex items-center font-normal text-12">
                   <p>testemail@hanyang.ac.kr</p>
@@ -75,16 +82,32 @@ const BasicModify = () => {
               </FormContent>
             </div>
             <div className="mt-11 flex justify-center">
-              <Button variant="default" size="default">
-                완료
-              </Button>
+              <Dialog>
+                <DialogTrigger>
+                  <Button variant="default" size="default">
+                    완료
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className='w-72'>
+                  <DialogHeader>
+                    <DialogTitle>
+                      <div className='w-10 h-10 mx-auto mb-3 flex justify-center items-center rounded-full border-1 border-primary '>
+                        <p className='text-24 text-primary font-semibold'>!</p></div>
+                      <p className=''>제출 하시겠습니까?</p>
+                    </DialogTitle>
+                  </DialogHeader>
+                  <DialogClose className='w-32 mx-auto flex justify-between' >
+                    <Button variant="slateFilled" size="sm">확인</Button>
+                    <Button variant="slate" size="sm">취소</Button>
+                  </DialogClose>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
-            </div>
-
-          </div>
-            
+        </div>
+      </div>
       <Footer />
+      
     </>
   )
 }
