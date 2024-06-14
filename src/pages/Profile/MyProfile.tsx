@@ -1,4 +1,4 @@
-import SideMenu from '@/components/ui/SideMenu'
+import SideMenu from '@/components/Profile/SideMenu'
 import ProfileComponent from '@/components/Profile/ProfileComponent'
 import Footer from '@/components/ui/Footer'
 

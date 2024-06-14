@@ -1,12 +1,11 @@
 import { PiNotePencilBold, PiStudentDuotone, PiChalkboardTeacher } from "react-icons/pi";
-import { Avatar as SmallAvatar, AvatarFallback as SmallAvatarFallback , AvatarImage as SmallAvatarImage } from '@/components/ui/smallAvatar';
-import { Avatar as BigAvatar, AvatarFallback as BigAvatarFallback , AvatarImage as BigAvatarImage } from '@/components/ui/bigAvatar';
 import {
   Dialog,
   DialogContent,
   DialogTrigger
 } from "@/components/ui/Dialog"
 import ProfileComponent from "@/components/Profile/ProfileComponent";
+import ProfileImg from "@/components/ProfileImg";
 // import {
 //   Carousel,
 //   CarouselContent,
@@ -51,10 +50,7 @@ const Main = () => {
                 <Dialog>
                   <div className="w-full flex flex-col items-center gap-5">
                     <DialogTrigger >
-                      <SmallAvatar >
-                        <SmallAvatarImage src="https://github.com/shadcn.png" />
-                        <SmallAvatarFallback>CN</SmallAvatarFallback>
-                      </SmallAvatar>
+                      <ProfileImg size={20} point={200} />
                     </DialogTrigger>
                     <DialogTrigger>
                       <p className='text-20 text-center'>닉네임</p>
@@ -75,10 +71,7 @@ const Main = () => {
                 <Dialog>
                   <div className="w-full flex flex-col items-center gap-5">
                     <DialogTrigger >
-                      <BigAvatar >
-                        <BigAvatarImage src="https://github.com/shadcn.png" />
-                        <BigAvatarFallback>CN</BigAvatarFallback>
-                      </BigAvatar>
+                    <ProfileImg size={24} point={20} />
                     </DialogTrigger>
                     <DialogTrigger>
                       <p className='text-20 text-center'>닉네임</p>
@@ -99,10 +92,7 @@ const Main = () => {
                 <Dialog>
                   <div className="w-full flex flex-col items-center gap-5">
                     <DialogTrigger >
-                      <SmallAvatar >
-                        <SmallAvatarImage src="https://github.com/shadcn.png" />
-                        <SmallAvatarFallback>CN</SmallAvatarFallback>
-                      </SmallAvatar>
+                      <ProfileImg size={20} point={20} />
                     </DialogTrigger>
                     <DialogTrigger>
                       <p className='text-20 text-center'>닉네임</p>
@@ -123,32 +113,67 @@ const Main = () => {
         <section className='w-800 mx-auto mb-360' >
           <h1 className='h2'>과외 신청하기</h1>
           <p className='pt-2 text-20 mb-20'>훌륭한 멘토님들을 살펴보고 과외 신청을 해보세요!</p>
-            <div className='w-full flex justify-between items-end'>
-              <div className='w-52 py-5 border-2 border-silver rounded-md'>
-                <SmallAvatar >
-                  <SmallAvatarImage src="https://github.com/shadcn.png" />
-                  <SmallAvatarFallback>CN</SmallAvatarFallback>
-                </SmallAvatar>            
-                <p className='text-20 text-center mt-5 mb-16'>닉네임</p>
-                <p className='text-20 text-center'>2000P</p>
+          <div className='w-full flex justify-between items-end'>
+            <div className='w-52'>
+              <div className='w-full py-5 border-2 border-silver rounded-md'>
+                <Dialog>
+                  <div className="w-full flex flex-col items-center gap-5">
+                    <DialogTrigger >
+                      <ProfileImg size={20} point={200} />
+                    </DialogTrigger>
+                    <DialogTrigger>
+                      <p className='text-20 text-center'>닉네임</p>
+                    </DialogTrigger>
+                  </div>
+                  <DialogContent className='w-[550px]'>
+                    <div className="mt-4 mb-4">
+                      <ProfileComponent />
+                    </div>
+                  </DialogContent>
+                </Dialog>
+                <p className='mt-16 text-20 text-center'>2000P</p>
               </div>
-              <div className='w-60 py-5 border-2 border-gold rounded-md'>
-                <BigAvatar >
-                  <BigAvatarImage src="https://github.com/shadcn.png" />
-                  <BigAvatarFallback>CN</BigAvatarFallback>
-                </BigAvatar>                
-                <p className='text-20 text-center mt-5 mb-24'>닉네임</p>
-                <p className='text-20 text-center'>2000P</p>
+            </div>
+            <div className='w-60'>
+              <div className='w-full py-5 border-2 border-gold rounded-md'>
+                <Dialog>
+                  <div className="w-full flex flex-col items-center gap-5">
+                    <DialogTrigger >
+                    <ProfileImg size={24} point={20} />
+                    </DialogTrigger>
+                    <DialogTrigger>
+                      <p className='text-20 text-center'>닉네임</p>
+                    </DialogTrigger>
+                  </div>
+                  <DialogContent className='w-[550px]'>
+                    <div className="mt-4 mb-4">
+                      <ProfileComponent />
+                    </div>
+                  </DialogContent>
+                </Dialog>
+                <p className='mt-24 text-20 text-center'>2000P</p>
               </div>
-              <div className='w-52 py-5 border-2 border-bronze rounded-md'>
-                <SmallAvatar >
-                  <SmallAvatarImage src="https://github.com/shadcn.png" />
-                  <SmallAvatarFallback>CN</SmallAvatarFallback>
-                </SmallAvatar>                
-                <p className='text-20 text-center mt-5 mb-16'>닉네임</p>
-                <p className='text-20 text-center'>2000P</p>
+            </div>
+            <div className='w-52'>
+                <div className='w-full py-5 border-2 border-bronze rounded-md'>
+                <Dialog>
+                  <div className="w-full flex flex-col items-center gap-5">
+                    <DialogTrigger >
+                      <ProfileImg size={20} point={20} />
+                    </DialogTrigger>
+                    <DialogTrigger>
+                      <p className='text-20 text-center'>닉네임</p>
+                    </DialogTrigger>
+                  </div>
+                  <DialogContent className='w-[550px]'>
+                    <div className="mt-4 mb-4">
+                      <ProfileComponent />
+                    </div>
+                  </DialogContent>
+                </Dialog>
+                <p className='mt-16 text-20 text-center'>2000P</p>
               </div>
-
+            </div>
           </div>
         </section>
       
