@@ -38,7 +38,7 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} >
-          <Route path="main" element={<Main />} />
+          <Route index element={<Main />} />
           <Route path="myprofile" element={<MyProfile />} />
           <Route path="basicmodify" element={<BasicModify />} />
           <Route path="mentormodify" element={<MentorModify />} />

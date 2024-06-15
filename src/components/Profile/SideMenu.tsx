@@ -10,11 +10,11 @@ const SideMenu = ({menu1, path1 , menu2, path2}:Props) => {
   const navigate = useNavigate();
 
   return (
-      <div className="w-[89px] flex flex-col">
-        <p onClick={() => navigate(`/${path1}`)} className='w-full h-7 text-12 font-sans p-2 rounded-md hover:bg-slate-400/20 cursor-pointer'>
+      <div className="w-40 flex flex-col items-center">
+        <p onClick={() => navigate(`/${path1}`)} className='w-34 box-border text-16 text-center font-sans py-2 rounded-md hover:bg-slate-400/20 cursor-pointer'>
           {menu1}
         </p>
-        <p onClick={() => navigate(`/${path2}`)} className='w-full h-7 text-12 font-sans p-2 mt-3 rounded-md hover:bg-slate-400/20 cursor-pointer'>
+        <p onClick={() => navigate(`/${path2}`)} className='w-34 box-border text-16 text-center font-sans py-2 mt-2 rounded-md hover:bg-slate-400/20 cursor-pointer'>
           {menu2}
         </p>
       </div>
