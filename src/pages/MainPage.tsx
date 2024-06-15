@@ -6,16 +6,12 @@ import {
 } from "@/components/ui/Dialog"
 import ProfileComponent from "@/components/Profile/ProfileComponent";
 import ProfileImg from "@/components/ProfileImg";
-// import {
-//   Carousel,
-//   CarouselContent,
-//   CarouselItem,
-//   CarouselNext,
-//   CarouselPrevious,
-// } from "@/components/ui/carousel"
 
 
- 
+import React, { Component } from "react";
+// import Slider from "react-slick";
+
+
 const Main = () => {
   
   return (
@@ -66,7 +62,7 @@ const Main = () => {
               </div>
             </div>
             <div className='w-60'>
-              <p className='text-56 text-center text-gold font-semibold'>1</p>
+              <p className='text-60 text-center text-gold font-semibold'>1</p>
               <div className='w-full py-5 border-2 border-gold rounded-md'>
                 <Dialog>
                   <div className="w-full flex flex-col items-center gap-5">
@@ -113,68 +109,7 @@ const Main = () => {
         <section className='w-800 mx-auto mb-360' >
           <h1 className='h2'>과외 신청하기</h1>
           <p className='pt-2 text-20 mb-20'>훌륭한 멘토님들을 살펴보고 과외 신청을 해보세요!</p>
-          <div className='w-full flex justify-between items-end'>
-            <div className='w-52'>
-              <div className='w-full py-5 border-2 border-silver rounded-md'>
-                <Dialog>
-                  <div className="w-full flex flex-col items-center gap-5">
-                    <DialogTrigger >
-                      <ProfileImg size={20} point={200} />
-                    </DialogTrigger>
-                    <DialogTrigger>
-                      <p className='text-20 text-center'>닉네임</p>
-                    </DialogTrigger>
-                  </div>
-                  <DialogContent className='w-[550px]'>
-                    <div className="mt-4 mb-4">
-                      <ProfileComponent />
-                    </div>
-                  </DialogContent>
-                </Dialog>
-                <p className='mt-16 text-20 text-center'>2000P</p>
-              </div>
-            </div>
-            <div className='w-60'>
-              <div className='w-full py-5 border-2 border-gold rounded-md'>
-                <Dialog>
-                  <div className="w-full flex flex-col items-center gap-5">
-                    <DialogTrigger >
-                    <ProfileImg size={24} point={20} />
-                    </DialogTrigger>
-                    <DialogTrigger>
-                      <p className='text-20 text-center'>닉네임</p>
-                    </DialogTrigger>
-                  </div>
-                  <DialogContent className='w-[550px]'>
-                    <div className="mt-4 mb-4">
-                      <ProfileComponent />
-                    </div>
-                  </DialogContent>
-                </Dialog>
-                <p className='mt-24 text-20 text-center'>2000P</p>
-              </div>
-            </div>
-            <div className='w-52'>
-                <div className='w-full py-5 border-2 border-bronze rounded-md'>
-                <Dialog>
-                  <div className="w-full flex flex-col items-center gap-5">
-                    <DialogTrigger >
-                      <ProfileImg size={20} point={20} />
-                    </DialogTrigger>
-                    <DialogTrigger>
-                      <p className='text-20 text-center'>닉네임</p>
-                    </DialogTrigger>
-                  </div>
-                  <DialogContent className='w-[550px]'>
-                    <div className="mt-4 mb-4">
-                      <ProfileComponent />
-                    </div>
-                  </DialogContent>
-                </Dialog>
-                <p className='mt-16 text-20 text-center'>2000P</p>
-              </div>
-            </div>
-          </div>
+          
         </section>
       
       </div>

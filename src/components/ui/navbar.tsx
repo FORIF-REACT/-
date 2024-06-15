@@ -9,6 +9,7 @@ import {
   Transition,
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
 
 const navigation = [
   { name: "과외 신청", href: "#", current: true },
@@ -24,10 +25,12 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
+  const navigate = useNavigate()
+
   return (
     <Disclosure
       as="nav"
-      className="w-full h-[60px] flex items-center justify-center bg-white border-b-2 border-[#94A3B8]/30"
+      className=" w-full h-[60px] flex items-center justify-center bg-white border-b-1 border-border"
     >
       {({ open }) => (
         <>
@@ -45,9 +48,9 @@ export default function Navbar() {
           </div>
           <button
             className="flex flex-shrink-0 items-center"
-            onClick={() => {}}
+            onClick={() => {navigate('/')}}
           >
-            <h1 className="absolute left-24 font-logo text-40 text-accent">
+            <h1 className="absolute left-24 font-logo text-40 text-accent" >
               Unitto
             </h1>
           </button>
@@ -75,7 +78,7 @@ export default function Navbar() {
               <BellIcon className="h-6 w-6" aria-hidden="true" />
             </button> */}
 
-            <button
+            {/* <button
               className="relative ml-3 flex flex-row gap-2 items-center"
               onClick={() => {}}
               >
@@ -92,10 +95,10 @@ export default function Navbar() {
             </button>
             <button className="relative ml-3 text-16 font-semibold">
               LOG OUT
-            </button>
+            </button> */}
 
             {/* Profile dropdown */}
-            {/* <Menu as="div" className="relative ml-3">
+            <Menu as="div" className="relative ml-3">
               <div>
                 <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="absolute -inset-1.5" />
@@ -119,13 +122,39 @@ export default function Navbar() {
                   <MenuItem>
                     {({ focus }) => (
                       <a
-                        href="#"
+                        href="./myprofile"
                         className={classNames(
-                          focus ? "bg-gray-100" : "",
-                          "block px-4 py-2 text-sm text-gray-700"
+                          focus ? "text-black" : "",
+                          "block px-3 pt-3 pb-2 mx-3 text-14 text-muted"
                         )}
                       >
-                        Your Profile
+                        내 프로필
+                      </a>
+                    )}
+                  </MenuItem>
+                  <MenuItem>
+                    {({ focus }) => (
+                      <a
+                        href="./basicmodify"
+                        className={classNames(
+                          focus ? "text-black" : "",
+                          "block px-3 py-2 mx-3 text-14 text-muted"
+                        )}
+                      >
+                        기본 정보 수정
+                      </a>
+                    )}
+                  </MenuItem>
+                  <MenuItem>
+                    {({ focus }) => (
+                      <a
+                        href="./mentormodify"
+                        className={classNames(
+                          focus ? "text-black" : "",
+                          "block px-3 pt-2 pb-2 mx-3 text-14 text-muted"
+                        )}
+                      >
+                        멘토 정보 수정
                       </a>
                     )}
                   </MenuItem>
@@ -134,21 +163,8 @@ export default function Navbar() {
                       <a
                         href="#"
                         className={classNames(
-                          focus ? "bg-gray-100" : "",
-                          "block px-4 py-2 text-sm text-gray-700"
-                        )}
-                      >
-                        Settings
-                      </a>
-                    )}
-                  </MenuItem>
-                  <MenuItem>
-                    {({ focus }) => (
-                      <a
-                        href="#"
-                        className={classNames(
-                          focus ? "bg-gray-100" : "",
-                          "block px-4 py-2 text-sm text-gray-700"
+                          // focus ? "bg-gray-100" : "",
+                          "block box-border mx-2 my-1 px-4 py-1 rounded-md text-14 text-gray-700 hover:bg-slate-100 "
                         )}
                       >
                         Sign out
@@ -157,7 +173,7 @@ export default function Navbar() {
                   </MenuItem>
                 </MenuItems>
               </Transition>
-            </Menu> */}
+            </Menu>
           </div>
 
           <DisclosurePanel className="sm:hidden">
