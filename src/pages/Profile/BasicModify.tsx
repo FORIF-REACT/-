@@ -13,6 +13,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/Dialog"
+import { useNavigate } from 'react-router-dom'
 
 
 const BasicModify = () => {
@@ -43,6 +44,8 @@ const BasicModify = () => {
     { id: 2, name: "서울특별시 광진구", value: 15 },
     { id: 3, name: "서울특별시 강동구", value: 32 },
   ];
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -81,11 +84,11 @@ const BasicModify = () => {
                 ></Select>
               </FormContent>
             </div>
-            <div className="mt-11 flex justify-center">
+            <div className="mt-11 flex justify-center gap-4">
               <Dialog>
                 <DialogTrigger>
-                  <Button variant="default" size="default">
-                    완료
+                  <Button variant="filled" size="default">
+                    확인
                   </Button>
                 </DialogTrigger>
                 <DialogContent className='w-72'>
@@ -97,11 +100,14 @@ const BasicModify = () => {
                     </DialogTitle>
                   </DialogHeader>
                   <DialogClose className='w-32 mx-auto flex justify-between' >
-                    <Button variant="slateFilled" size="sm">확인</Button>
+                    <Button variant="slateFilled" size="sm" onClick={() => navigate("/myprofile")}>확인</Button>
                     <Button variant="slate" size="sm">취소</Button>
                   </DialogClose>
                 </DialogContent>
               </Dialog>
+              <Button variant="default" size="default" onClick={() => navigate("/myprofile")}>
+                취소
+              </Button>
             </div>
           </div>
         </div>

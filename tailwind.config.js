@@ -106,6 +106,7 @@ module.exports = {
         200: "200px",
         240: "240px",
         360: "360px",
+        450: "450px"
       },
       fontFamily: {
         sans: ['Noto Sans', 'Noto Sans KR', 'sans-serif'],

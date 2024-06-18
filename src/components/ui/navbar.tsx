@@ -50,7 +50,7 @@ export default function Navbar() {
             className="flex flex-shrink-0 items-center"
             onClick={() => {navigate('/')}}
           >
-            <h1 className="absolute left-24 font-logo text-40 text-accent" >
+            <h1 className="absolute left-24 font-logo text-40 bg-gradient-to-r from-primary via-blue-500 to-primary bg-clip-text text-transparent " >
               Unitto
             </h1>
           </button>
@@ -125,7 +125,7 @@ export default function Navbar() {
                         href="./myprofile"
                         className={classNames(
                           focus ? "text-black" : "",
-                          "block px-3 pt-3 pb-2 mx-3 text-14 text-muted"
+                          "block px-3 pt-3 pb-2 mx-3 text-14 text-muted hover:text-black"
                         )}
                       >
                         내 프로필
@@ -138,7 +138,7 @@ export default function Navbar() {
                         href="./basicmodify"
                         className={classNames(
                           focus ? "text-black" : "",
-                          "block px-3 py-2 mx-3 text-14 text-muted"
+                          "block px-3 py-2 mx-3 text-14 text-muted hover:text-black"
                         )}
                       >
                         기본 정보 수정
@@ -150,8 +150,7 @@ export default function Navbar() {
                       <a
                         href="./mentormodify"
                         className={classNames(
-                          focus ? "text-black" : "",
-                          "block px-3 pt-2 pb-2 mx-3 text-14 text-muted"
+                          "block px-3 pt-2 pb-2 mx-3 text-14 text-muted hover:text-black"
                         )}
                       >
                         멘토 정보 수정
@@ -164,7 +163,7 @@ export default function Navbar() {
                         href="#"
                         className={classNames(
                           // focus ? "bg-gray-100" : "",
-                          "block box-border mx-2 my-1 px-4 py-1 rounded-md text-14 text-gray-700 hover:bg-slate-100 "
+                          "block box-border border-primary border-2 mx-4 my-2 py-1 rounded-md text-14 text-primary text-center duration-300 hover:bg-primary hover:text-white"
                         )}
                       >
                         Sign out
