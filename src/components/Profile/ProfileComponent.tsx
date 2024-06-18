@@ -1,21 +1,18 @@
 import BasicLabel from './BasicLabel'
 import Tag from '../ui/Tag'
 import MentorLabel from './MentorLabel'
+import ProfileImg from '../ProfileImg'
 
 const Profile = () => {
 
   return (
     <div>
       <div className="flex items-center w-480 h-[180px] bg-[#FBFDFF] shadow-md mx-auto">
-        <div className="w-full flex items-center">
-          <div className="w-full h-auto">
-              <div className="w-18 h-18 rounded-[36px] m-auto border-ring border-4">
-                <div className="box-border w-14 h-14 bg-slate-400 rounded-[28px] m-1"></div>
-              </div>
+        <div className="w-full flex flex-col items-center">
+              <ProfileImg size={16} point={400} border={4} />
               <p className="w-full text-16 text-center mt-3 mx-auto">
                 닉네임
               </p>
-          </div>
         </div>
         <div className="w-[360px] h-full flex flex-col">
           <BasicLabel title="이메일" content="email@hanyang.ac.kr" className="border-b" />
