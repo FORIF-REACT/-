@@ -17,7 +17,7 @@ const ProfileImg = ({border, size, point}:{border: number, size:number, point:nu
    
 
   return (
-    <div className={`w-[calc((${size}+4) * 4px)] h-[calc((${size}+4) * 4px)] border-${border} border-${color} rounded-full`}>
+    <div className={`w-[calc((${size}+${border}) * 4px)] h-[calc((${size}+${border}) * 4px)] border-${border} border-${color} rounded-full`}>
       <Avatar className={`w-${size} h-${size}`} >
         <AvatarImage src="https://github.com/shadcn.png" />
         <AvatarFallback>CN</AvatarFallback>
