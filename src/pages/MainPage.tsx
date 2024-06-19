@@ -1,15 +1,19 @@
+import React, { useRef }from "react";
 import { PiNotePencilBold, PiStudentDuotone, PiChalkboardTeacher } from "react-icons/pi";
 import {
   Dialog,
   DialogContent,
   DialogTrigger
 } from "@/components/ui/Dialog"
+
 import ProfileComponent from "@/components/Profile/ProfileComponent";
 import ProfileImg from "@/components/ProfileImg";
-import React, { useRef }from "react";
-import Slider from "react-slick";
+
+
+// import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -171,8 +175,6 @@ const Main = () => {
           <p className='pt-2 text-20 mb-28 up5'>훌륭한 멘토님들을 살펴보고 과외 신청을 해보세요!</p>
           
           <div className="slider-container up6">
-            <Slider {...settings}>
-
               <div className='w-32 py-7 bg-[#F2F0FF]/30 shadow-md'>
                 <ProfileModal imagesize={20} username="1번" point={30} />
                 <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
@@ -188,23 +190,6 @@ const Main = () => {
                 <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
                 <p className="text-20 text-center text-primary">공업수학1</p>
               </div>
-              <div className='w-32 py-7 bg-[#F2F0FF]/30 shadow-md'>
-                <ProfileModal imagesize={20} username="4번" point={30} />
-                <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
-                <p className="text-20 text-center text-primary">공업수학1</p>
-              </div>
-              <div className='w-32 py-7 bg-[#F2F0FF]/30 shadow-md'>
-                <ProfileModal imagesize={20} username="5번" point={30} />
-                <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
-                <p className="text-20 text-center text-primary">공업수학1</p>
-              </div>
-              <div className='w-32 py-7 bg-[#F2F0FF]/30 shadow-md'>
-                <ProfileModal imagesize={20} username="6번" point={30} />
-                <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
-                <p className="text-20 text-center text-primary">공업수학1</p>
-              </div>
-              
-            </Slider>
           </div>
         </section>
       
