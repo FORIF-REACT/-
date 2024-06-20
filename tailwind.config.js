@@ -83,6 +83,7 @@ module.exports = {
         page: '1100px',
         18: '72px',
         34: '136px',
+        68: '272px',
         160: '160px',
         228: '228px',
         304: '304px',
@@ -96,6 +97,7 @@ module.exports = {
       },
       height: {
         18: '72px',
+        68: '272px',
         160: '160px'
       },
       padding: {
@@ -104,6 +106,7 @@ module.exports = {
       },
       margin: {
         100: "100px",
+        150: "150px",
         200: "200px",
         240: "240px",
         360: "360px",

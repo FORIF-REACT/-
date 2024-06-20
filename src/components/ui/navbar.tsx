@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="fixed top-0 w-full h-[60px] flex items-center justify-center bg-white border-b-1 border-border"
+      className="fixed top-0 w-full h-[60px] flex items-center justify-center bg-white border-b-1 border-border z-10"
     >
       {({ open }) => (
         <>
@@ -50,7 +50,7 @@ export default function Navbar() {
             className="flex flex-shrink-0 items-center"
             onClick={() => {navigate('/')}}
           >
-            <h1 className="absolute left-24 font-logo text-40  font-semibold bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent " >
+            <h1 className="absolute left-24 font-logo text-40 bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent " >
               Unitto
             </h1>
           </button>
@@ -60,7 +60,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 className={classNames(
-                  "rounded-md px-3 py-2 text-sm font-medium text-muted hover:text-black"
+                  "rounded-md px-3 py-2 text-sm text-muted hover:text-black"
                 )}
                 aria-current={item.current ? "page" : undefined}
               >

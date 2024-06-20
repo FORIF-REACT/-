@@ -1,6 +1,10 @@
 import React,  { Component, useRef }from "react";
 
 import { PiNotePencilBold, PiStudentDuotone, PiChalkboardTeacher } from "react-icons/pi";
+import { FaCrown } from "react-icons/fa6";
+import { GiCrenelCrown, GiImperialCrown } from "react-icons/gi";
+
+
 import {
   Dialog,
   DialogContent,
@@ -40,7 +44,7 @@ const ProfileModal = ({ username, point,imagesize }:ProfileProps) => {
           <ProfileImg size={imagesize} point={point}  />
         </DialogTrigger>
         <DialogTrigger>
-          <p className='text-20 text-center'>{username}</p>
+          <p className='text-20 text-center text-darkgray'>{username}</p>
         </DialogTrigger>
       </div>
       <DialogContent className='w-[550px]'>
@@ -75,7 +79,7 @@ const Main = () => {
         rotate: 360,
         duration:2,
         opacity:0,
-        delay: 2,
+        delay: 1,
         scrollTrigger: ".trigger",
       }),
       gsap.from(".up1", {
@@ -131,7 +135,7 @@ const Main = () => {
         <section className=' w-960 mx-auto mb-180 flex justify-between items-center  ' >
           <div>
             <p className='text-20 text-placeholder'>한양대 학생들의 학점을 책임지는</p>
-            <TypeIt element="h1" className='text-70 font-extrabold font-logo mb-6 bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent'>
+            <TypeIt element="h1" className='text-70 font-logo mb-6 bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent'>
               University manitto
             </TypeIt>
             <p className='text-20 leading-28'>원하는 과목의 멘토님께 과외 신청을 해보고,</p>
@@ -156,25 +160,25 @@ const Main = () => {
           <h1 className='h2 text-end text-[#291F5C] up3'>멘토 랭킹</h1>
           <p className='pt-2 text-20 text-end mb-20 up3'>포인트를 많이 획득할수록 순위가 높아집니다!</p>
           <div className='w-full flex justify-between items-end up4'>
-            <div className='w-52'>
-              <p className='text-56 text-center text-silver font-semibold'>2</p>
-              <div className='w-full py-6 border-2 border-silver rounded-md'>
+            <div className="flex flex-col items-center">
+              <GiCrenelCrown  size={85} className="text-silver"/>
+              <div className='w-52 py-5 border-2 border-silver rounded-2xl shadow-md shadow-silver'>
                 <ProfileModal imagesize={20} username="2등" point={400} />
-                <p className='mt-14 text-24 text-center'>2000P</p>
+                <p className='mt-6 text-24 text-center'>2000P</p>
               </div>
             </div>
-            <div className='w-60'>
-              <p className='text-60 text-center text-gold font-semibold'>1</p>
-              <div className='w-full py-6 border-2 border-gold rounded-md'>
+            <div className="flex flex-col items-center">
+              <GiCrenelCrown  size={110} className="text-gold"/>
+              <div className='w-60 py-5 border-2 border-gold rounded-2xl shadow-md shadow-gold '>
                 <ProfileModal imagesize={24} username="1등" point={200} />
-                <p className='mt-20 text-24 text-center'>2000P</p>
+                <p className='mt-12 text-24 text-center'>2000P</p>
               </div>
             </div>
-            <div className='w-52'>
-              <p className='text-56 text-center text-bronze font-semibold'>3</p>
-              <div className='w-full py-6 border-2 border-bronze rounded-md'>
+            <div className="flex flex-col items-center">
+              <GiCrenelCrown  size={85} className="text-bronze"/>
+              <div className='w-52 py-5 border-2 border-bronze rounded-2xl shadow-md shadow-bronze '>
                 <ProfileModal imagesize={20} username="3등" point={100} />
-                <p className='mt-14 text-24 text-center'>2000P</p>
+                <p className='mt-6 text-24 text-center'>2000P</p>
               </div>
             </div>
           </div>
