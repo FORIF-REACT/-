@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className=" w-full h-[60px] flex items-center justify-center bg-white border-b-1 border-border"
+      className="fixed top-0 w-full h-[60px] flex items-center justify-center bg-white border-b-1 border-border"
     >
       {({ open }) => (
         <>

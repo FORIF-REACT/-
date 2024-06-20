@@ -143,7 +143,7 @@ const Main = () => {
         </section>
 
       {/* 메인2 */} 
-        <section className='w-full mx-auto my-450 trigger' >
+        <section className='w-full mx-auto my-450 trigger1' >
           <div className='w-[500px] h-auto mx-auto mb-20 flex justify-between up1' >
             <PiStudentDuotone size={200} />
             <PiChalkboardTeacher size={200}/>
@@ -158,23 +158,23 @@ const Main = () => {
           <div className='w-full flex justify-between items-end up4'>
             <div className='w-52'>
               <p className='text-56 text-center text-silver font-semibold'>2</p>
-              <div className='w-full py-5 border-2 border-silver rounded-md'>
+              <div className='w-full py-6 border-2 border-silver rounded-md'>
                 <ProfileModal imagesize={20} username="2등" point={400} />
-                <p className='mt-16 text-20 text-center'>2000P</p>
+                <p className='mt-14 text-24 text-center'>2000P</p>
               </div>
             </div>
             <div className='w-60'>
               <p className='text-60 text-center text-gold font-semibold'>1</p>
-              <div className='w-full py-5 border-2 border-gold rounded-md'>
+              <div className='w-full py-6 border-2 border-gold rounded-md'>
                 <ProfileModal imagesize={24} username="1등" point={200} />
-                <p className='mt-24 text-20 text-center'>2000P</p>
+                <p className='mt-20 text-24 text-center'>2000P</p>
               </div>
             </div>
             <div className='w-52'>
               <p className='text-56 text-center text-bronze font-semibold'>3</p>
-              <div className='w-full py-5 border-2 border-bronze rounded-md'>
+              <div className='w-full py-6 border-2 border-bronze rounded-md'>
                 <ProfileModal imagesize={20} username="3등" point={100} />
-                <p className='mt-16 text-20 text-center'>2000P</p>
+                <p className='mt-14 text-24 text-center'>2000P</p>
               </div>
             </div>
           </div>

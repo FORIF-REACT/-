@@ -6,16 +6,16 @@ const ProfileImg = ({size, point}:{ size:number, point:number}) => {
   const [color, setcolor] = useState<string>("bronze");
 
   const colorDecide = (point:number) => {
-    {(point <= 100) ? setcolor("bronze") 
-    : (point <= 200) ? setcolor("silver") 
-    : (point <= 300) ? setcolor("gold") 
-    : setcolor("platinum")}
+
+      {(point >= 300 ) ? setcolor("platinum") 
+      : (point >= 200) ? setcolor("gold") 
+      : (point >= 100) ? setcolor("silver") 
+      : setcolor("bronze")};
+
    }
    
    useEffect(() => {
-
     colorDecide(point)
-
    }, [point])
    
 
