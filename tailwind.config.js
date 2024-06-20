@@ -54,7 +54,7 @@ module.exports = {
         },
         darkgray: "#44475D",
         placeholder: "#717D8D",
-        platinum: "#B7F1F9",
+        platinum: "#C5F8FF",
         gold: "#F4E075",
         silver: "#D0D0D0",
         bronze: "#E6BA8F",

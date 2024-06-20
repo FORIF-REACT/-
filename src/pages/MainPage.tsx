@@ -1,4 +1,5 @@
-import React, { useRef }from "react";
+import React,  { Component, useRef }from "react";
+
 import { PiNotePencilBold, PiStudentDuotone, PiChalkboardTeacher } from "react-icons/pi";
 import {
   Dialog,
@@ -10,7 +11,7 @@ import ProfileComponent from "@/components/Profile/ProfileComponent";
 import ProfileImg from "@/components/ProfileImg";
 
 
-// import Slider from "react-slick";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -19,6 +20,8 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import TypeIt from "typeit-react";
+
+import './MainPage.css'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
@@ -30,7 +33,6 @@ interface ProfileProps {
 }
 
 const ProfileModal = ({ username, point,imagesize }:ProfileProps) => {
-
   return (
     <Dialog>
       <div className="w-full flex flex-col items-center gap-5">
@@ -54,16 +56,14 @@ const ProfileModal = ({ username, point,imagesize }:ProfileProps) => {
 const Main = () => {
 
   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
     className: "center",
     centerMode: true,
-    centerPadding: "60px"
+    infinite: true,
+    centerPadding: "60px",
+    autoplay: true,
+    draggable: false,
+    speed: 500,
+    slidesToShow: 3
   }
 
   const container = useRef<HTMLDivElement | null>(null);
@@ -181,27 +181,58 @@ const Main = () => {
         </section>
 
       {/* 과외 신청하기 */}
-        <section className='w-800 mx-auto my-450 trigger3' >
+        <section className='w-800 mx-auto my-450 trigger3 ' >
           <h1 className='h2 text-[#291F5C] up5'>과외 신청하기</h1>
           <p className='pt-2 text-20 mb-20 up5'>훌륭한 멘토님들을 살펴보고 과외 신청을 해보세요!</p>
-          
-          <div className="slider-container up6 flex justify-between">
-              <div className='w-52 py-7 bg-[#F2F0FF]/30 shadow-md'>
-                <ProfileModal imagesize={20} username="1번" point={30} />
-                <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
-                <p className="text-20 text-center text-primary">공업수학1</p>
-              </div>
-              <div className='w-52 py-7 bg-[#F2F0FF]/30 shadow-md'>
-                <ProfileModal imagesize={20} username="2번" point={30} />
-                <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
-                <p className="text-20 text-center text-primary">공업수학1</p>
-              </div>
-              <div className='w-52 py-7 bg-[#F2F0FF]/30 shadow-md'>
-                <ProfileModal imagesize={20} username="3번" point={30} />
-                <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
-                <p className="text-20 text-center text-primary">공업수학1</p>
-              </div>
+            <div className="slider-container up6">
+              <Slider {...settings}>
+                <div >
+                  <div className='w-48 mx-auto py-7 bg-[#F2F0FF]/30 shadow-md'>
+                    <ProfileModal imagesize={20} username="1번" point={30} />
+                    <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
+                    <p className="text-20 text-center text-primary">공업수학1</p>
+                  </div>
+                </div>
+                <div >
+                  <div className='w-48 mx-auto py-7 bg-[#F2F0FF]/30 shadow-md'>
+                    <ProfileModal imagesize={20} username="2번" point={30} />
+                    <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
+                    <p className="text-20 text-center text-primary">공업수학1</p>
+                  </div>
+                </div>
+                <div >
+                  <div className='w-48 mx-auto py-7 bg-[#F2F0FF]/30 shadow-md'>
+                    <ProfileModal imagesize={20} username="3번" point={30} />
+                    <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
+                    <p className="text-20 text-center text-primary">공업수학1</p>
+                  </div>
+                </div>
+                <div >
+                  <div className='w-48 mx-auto py-7 bg-[#F2F0FF]/30 shadow-md'>
+                    <ProfileModal imagesize={20} username="4번" point={30} />
+                    <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
+                    <p className="text-20 text-center text-primary">공업수학1</p>
+                  </div>
+                </div>
+                <div >
+                  <div className='w-48 mx-auto py-7 bg-[#F2F0FF]/30 shadow-md'>
+                    <ProfileModal imagesize={20} username="5번" point={30} />
+                    <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
+                    <p className="text-20 text-center text-primary">공업수학1</p>
+                  </div>
+                </div>
+                <div >
+                  <div className='w-48 mx-auto py-7 bg-[#F2F0FF]/30 shadow-md'>
+                    <ProfileModal imagesize={20} username="6번" point={30} />
+                    <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
+                    <p className="text-20 text-center text-primary">공업수학1</p>
+                  </div>
+                </div>
+                
+              </Slider>
+
           </div>
+          
         </section>
       
       </div>
