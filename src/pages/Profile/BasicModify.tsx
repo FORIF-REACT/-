@@ -112,7 +112,7 @@ const BasicModify = () => {
             </div>
             <div>
               <Input2 label="닉네임" placeholder="이송희"/>
-
+              <Input2 label="닉네임" placeholder="pasongtak" />
             </div>
           </div>
         </div>
