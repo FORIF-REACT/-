@@ -7,25 +7,25 @@ import {
   MenuItem,
   MenuItems,
   Transition,
-} from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useNavigate } from "react-router-dom";
+} from '@headlessui/react';
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useNavigate } from 'react-router-dom';
 
 const navigation = [
-  { name: "과외 신청", href: "#", current: true },
-  { name: "내 수업", href: "#", current: false },
-  { name: "멘토 랭킹", href: "#", current: false },
-  { name: "평가하기", href: "#", current: false },
+  { name: '과외 신청', href: './mentorlist', current: true },
+  { name: '내 수업', href: '#', current: false },
+  { name: '멘토 랭킹', href: './mentorrank', current: false },
+  { name: '평가하기', href: '#', current: false },
 ];
 
-const name = "닉네임";
+const name = '닉네임';
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Navbar() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <Disclosure
@@ -48,7 +48,9 @@ export default function Navbar() {
           </div>
           <button
             className="flex flex-shrink-0 items-center"
-            onClick={() => {navigate('/')}}
+            onClick={() => {
+              navigate('/');
+            }}
           >
             <h1 className="absolute left-24 font-logo text-40 bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent " >
               Unitto
@@ -62,7 +64,7 @@ export default function Navbar() {
                 className={classNames(
                   "rounded-md px-3 py-2 text-sm text-muted hover:text-black"
                 )}
-                aria-current={item.current ? "page" : undefined}
+                aria-current={item.current ? 'page' : undefined}
               >
                 {item.name}
               </a>
@@ -124,8 +126,8 @@ export default function Navbar() {
                       <a
                         href="./myprofile"
                         className={classNames(
-                          focus ? "text-black" : "",
-                          "block px-3 pt-3 pb-2 mx-3 text-14 text-muted hover:text-black"
+                          focus ? 'text-black' : '',
+                          'block px-3 pt-3 pb-2 mx-3 text-14 text-muted hover:text-black'
                         )}
                       >
                         내 프로필
@@ -137,8 +139,8 @@ export default function Navbar() {
                       <a
                         href="./basicmodify"
                         className={classNames(
-                          focus ? "text-black" : "",
-                          "block px-3 py-2 mx-3 text-14 text-muted hover:text-black"
+                          focus ? 'text-black' : '',
+                          'block px-3 py-2 mx-3 text-14 text-muted hover:text-black'
                         )}
                       >
                         기본 정보 수정
@@ -150,7 +152,7 @@ export default function Navbar() {
                       <a
                         href="./mentormodify"
                         className={classNames(
-                          "block px-3 pt-2 pb-2 mx-3 text-14 text-muted hover:text-black"
+                          'block px-3 pt-2 pb-2 mx-3 text-14 text-muted hover:text-black'
                         )}
                       >
                         멘토 정보 수정
@@ -163,7 +165,7 @@ export default function Navbar() {
                         href="#"
                         className={classNames(
                           // focus ? "bg-gray-100" : "",
-                          "block box-border border-primary border-2 mx-4 my-2 py-1 rounded-md text-14 text-primary text-center duration-300 hover:bg-primary hover:text-white"
+                          'block box-border border-primary border-2 mx-4 my-2 py-1 rounded-md text-14 text-primary text-center duration-300 hover:bg-primary hover:text-white'
                         )}
                       >
                         Sign out
@@ -184,11 +186,11 @@ export default function Navbar() {
                   href={item.href}
                   className={classNames(
                     item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-3 py-2 text-base font-medium"
+                      ? 'bg-gray-900 text-white'
+                      : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    'block rounded-md px-3 py-2 text-base font-medium'
                   )}
-                  aria-current={item.current ? "page" : undefined}
+                  aria-current={item.current ? 'page' : undefined}
                 >
                   {item.name}
                 </DisclosureButton>
