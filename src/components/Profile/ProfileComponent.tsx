@@ -9,7 +9,7 @@ const Profile = () => {
     <div>
       <div className="flex items-center w-480 h-[180px] bg-[#FBFDFF] shadow-md mx-auto">
         <div className="w-full flex flex-col items-center">
-              <ProfileImg size={16} point={300} border={4} />
+              <ProfileImg size={16} point={300} />
               <p className="w-full text-16 text-center mt-3 mx-auto">
                 닉네임
               </p>
