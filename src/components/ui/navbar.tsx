@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="fixed top-0 w-full h-[60px] flex items-center justify-center bg-white border-b-1 border-border z-50"
+      className="fixed top-0 w-full h-[60px] flex items-center justify-center bg-white border-b-1 border-border z-10"
     >
       {({ open }) => (
         <>
@@ -52,7 +52,7 @@ export default function Navbar() {
               navigate('/');
             }}
           >
-            <h1 className="absolute left-24 font-logo text-40  font-semibold bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent ">
+            <h1 className="absolute left-24 font-logo text-40 bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent ">
               Unitto
             </h1>
           </button>
