@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar';
 
 
-const ProfileImg = ({border, size, point}:{border: number, size:number, point:number}) => {
+const ProfileImg = ({size, point}:{ size:number, point:number}) => {
   const [color, setcolor] = useState<string>("bronze");
 
   const colorDecide = (point:number) => {
@@ -20,7 +20,7 @@ const ProfileImg = ({border, size, point}:{border: number, size:number, point:nu
    
 
   return (
-    <div className={`w-[calc((${size}+${border}) * 4px)] h-[calc((${size}+${border}) * 4px)] border-${border} border-${color} rounded-full`}>
+    <div className={`w-[calc((${size} + 4) * 4px)] h-[calc((${size} + 4) * 4px)] border-4 border-${color} rounded-full`}>
       <Avatar className={`w-${size} h-${size}`} >
         <AvatarImage src="https://github.com/shadcn.png" />
         <AvatarFallback>CN</AvatarFallback>

@@ -35,7 +35,7 @@ const ProfileModal = ({ username, point,imagesize }:ProfileProps) => {
     <Dialog>
       <div className="w-full flex flex-col items-center gap-5">
         <DialogTrigger >
-          <ProfileImg size={imagesize} point={point} border={4} />
+          <ProfileImg size={imagesize} point={point}  />
         </DialogTrigger>
         <DialogTrigger>
           <p className='text-20 text-center'>{username}</p>
@@ -131,7 +131,7 @@ const Main = () => {
         <section className=' w-960 mx-auto mb-180 flex justify-between items-center  ' >
           <div>
             <p className='text-20 text-placeholder'>한양대 학생들의 학점을 책임지는</p>
-            <TypeIt element="h1" className='text-70 font-extrabold font-logo mb-6 bg-gradient-to-r from-[#382A83] to-primary bg-clip-text text-transparent'>
+            <TypeIt element="h1" className='text-70 font-extrabold font-logo mb-6 bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent'>
               University manitto
             </TypeIt>
             <p className='text-20 leading-28'>원하는 과목의 멘토님께 과외 신청을 해보고,</p>

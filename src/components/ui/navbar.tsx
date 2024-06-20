@@ -50,7 +50,7 @@ export default function Navbar() {
             className="flex flex-shrink-0 items-center"
             onClick={() => {navigate('/')}}
           >
-            <h1 className="absolute left-24 font-logo text-40  font-semibold bg-gradient-to-r from-[#382A83] to-primary bg-clip-text text-transparent " >
+            <h1 className="absolute left-24 font-logo text-40  font-semibold bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent " >
               Unitto
             </h1>
           </button>
