@@ -46,7 +46,6 @@ function App() {
           <Route path="admin" element={<Admin />} />       
         </Route>
       </Routes>
-      {/* <ProfileModal /> */}
     </div>
 
   );

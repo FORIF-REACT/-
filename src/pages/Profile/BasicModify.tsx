@@ -1,5 +1,6 @@
 import FormContent from '@/components/Signup/formContent'
 import Input from '@/components/Signup/input'
+import Input2 from '@/components/input2'
 import RadioGroup from '@/components/Signup/radioGroup'
 import Select from '@/components/Signup/select'
 import Footer from '@/components/ui/Footer'
@@ -87,9 +88,9 @@ const BasicModify = () => {
             <div className="mt-11 flex justify-center gap-4">
               <Dialog>
                 <DialogTrigger>
-                  <Button variant="filled" size="default">
-                    확인
-                  </Button>
+                  <div className='h-[40px] px-9 text-12 rounded-md bg-primary text-white hover:bg-primary/80 flex items-center '>
+                    <p>확인</p>
+                  </div>
                 </DialogTrigger>
                 <DialogContent className='w-72'>
                   <DialogHeader>
@@ -108,6 +109,10 @@ const BasicModify = () => {
               <Button variant="default" size="default" onClick={() => navigate("/myprofile")}>
                 취소
               </Button>
+            </div>
+            <div>
+              <Input2 label="닉네임" placeholder="이송희"/>
+
             </div>
           </div>
         </div>
