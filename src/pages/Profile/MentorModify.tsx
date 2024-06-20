@@ -125,9 +125,9 @@ const BasicModify = () => {
               <div className="mt-11 flex justify-center gap-4">
                 <Dialog>
                   <DialogTrigger>
-                    <Button variant="filled" size="default">
-                      확인
-                    </Button>
+                    <div className='h-[40px] px-9 text-12 rounded-md bg-primary text-white hover:bg-primary/80 flex items-center '>
+                      <p>확인</p>
+                    </div>
                   </DialogTrigger>
                   <DialogContent className='w-72'>
                     <DialogHeader>

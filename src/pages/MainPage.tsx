@@ -18,6 +18,8 @@ import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import TypeIt from "typeit-react";
+
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 
@@ -73,42 +75,49 @@ const Main = () => {
         rotate: 360,
         duration:2,
         opacity:0,
+        delay: 2,
         scrollTrigger: ".trigger",
       }),
       gsap.from(".up1", {
         y: 200,
         duration:1,
         opacity:0,
+        delay:0.5,
         scrollTrigger: ".trigger1",
       }),
       gsap.from(".up2", {
         y: 200,
         duration:1,
         opacity:0,
+        delay:0.5,
         scrollTrigger: ".up1"
       }),
       gsap.from(".up3", {
         y: 200,
         duration:1,
         opacity:0,
+        delay:0.5,
         scrollTrigger: ".trigger2"
       }),
       gsap.from(".up4", {
         y: 200,
         duration:1,
         opacity:0,
+        delay:0.5,
         scrollTrigger: ".up3"
       }),
       gsap.from(".up5", {
         y: 200,
         duration:1,
         opacity:0,
+        delay:0.5,
         scrollTrigger: ".trigger3"
       }),
       gsap.from(".up6", {
         y: 200,
         duration:1,
         opacity:0,
+        delay:0.5,
         scrollTrigger: ".up5"
       })
     })
@@ -119,31 +128,33 @@ const Main = () => {
       <div className='w-page mx-auto my-240 trigger' ref={container}>
 
       {/* 메인1 */}
-        <section className=' w-960 mx-auto mb-180 flex justify-between items-center ' >
-          <div className="rotate">
+        <section className=' w-960 mx-auto mb-180 flex justify-between items-center  ' >
+          <div>
             <p className='text-20 text-placeholder'>한양대 학생들의 학점을 책임지는</p>
-            <h1 className='text-60 font-bold font-logo mb-6 bg-gradient-to-r from-primary via-blue-500 to-primary bg-clip-text text-transparent'>University manitto</h1>
+            <TypeIt element="h1" className='text-70 font-extrabold font-logo mb-6 bg-gradient-to-r from-[#382A83] to-primary bg-clip-text text-transparent'>
+              University manitto
+            </TypeIt>
             <p className='text-20 leading-28'>원하는 과목의 멘토님께 과외 신청을 해보고,</p>
             <p className='text-20 leading-28'>멘토가 되어 수업을 개설해 보세요.</p>
           </div>
           <div className="rotate">
-            <PiNotePencilBold size={160}/>
+            <PiNotePencilBold size={160} className="text-[#382A83]"/>
           </div>
         </section>
 
       {/* 메인2 */} 
         <section className='w-full mx-auto my-450 trigger' >
           <div className='w-[500px] h-auto mx-auto mb-20 flex justify-between up1' >
-            <PiStudentDuotone size={200}  />
+            <PiStudentDuotone size={200} />
             <PiChalkboardTeacher size={200}/>
           </div>
-          <p className='w-full h-auto text-center text-36 up2'>회원가입 시 <strong className="bg-gradient-to-r from-primary via-blue-500 to-primary bg-clip-text text-transparent" >멘티</strong>, 수업 개설 시 <strong className="bg-gradient-to-r from-primary via-blue-500 to-primary bg-clip-text text-transparent">멘토와 멘티</strong> 모두 가능!</p>
+          <p className='w-full h-auto text-center text-36 up2'>회원가입 시 <strong className="bg-gradient-to-r from-[#382A83] to-primary bg-clip-text text-transparent" >멘티</strong>, 수업 개설 시 <strong className="bg-gradient-to-r from-[#382A83] to-primary bg-clip-text text-transparent">멘토와 멘티</strong> 모두 가능!</p>
         </section>
 
       {/* 멘토 랭킹 */}
         <section className='w-800 mx-auto my-450 trigger2'  >
           <h1 className='h2 text-end text-[#291F5C] up3'>멘토 랭킹</h1>
-          <p className='pt-2 text-20 text-end mb-28 up3'>포인트를 많이 획득할수록 순위가 높아집니다!</p>
+          <p className='pt-2 text-20 text-end mb-20 up3'>포인트를 많이 획득할수록 순위가 높아집니다!</p>
           <div className='w-full flex justify-between items-end up4'>
             <div className='w-52'>
               <p className='text-56 text-center text-silver font-semibold'>2</p>
@@ -172,20 +183,20 @@ const Main = () => {
       {/* 과외 신청하기 */}
         <section className='w-800 mx-auto my-450 trigger3' >
           <h1 className='h2 text-[#291F5C] up5'>과외 신청하기</h1>
-          <p className='pt-2 text-20 mb-28 up5'>훌륭한 멘토님들을 살펴보고 과외 신청을 해보세요!</p>
+          <p className='pt-2 text-20 mb-20 up5'>훌륭한 멘토님들을 살펴보고 과외 신청을 해보세요!</p>
           
-          <div className="slider-container up6">
-              <div className='w-32 py-7 bg-[#F2F0FF]/30 shadow-md'>
+          <div className="slider-container up6 flex justify-between">
+              <div className='w-52 py-7 bg-[#F2F0FF]/30 shadow-md'>
                 <ProfileModal imagesize={20} username="1번" point={30} />
                 <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
                 <p className="text-20 text-center text-primary">공업수학1</p>
               </div>
-              <div className='w-32 py-7 bg-[#F2F0FF]/30 shadow-md'>
+              <div className='w-52 py-7 bg-[#F2F0FF]/30 shadow-md'>
                 <ProfileModal imagesize={20} username="2번" point={30} />
                 <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
                 <p className="text-20 text-center text-primary">공업수학1</p>
               </div>
-              <div className='w-32 py-7 bg-[#F2F0FF]/30 shadow-md'>
+              <div className='w-52 py-7 bg-[#F2F0FF]/30 shadow-md'>
                 <ProfileModal imagesize={20} username="3번" point={30} />
                 <p className="w-10 mx-auto mt-2 mb-4 py-0.5 text-center text-16 bg-white border-1 rounded-sm">여성</p>
                 <p className="text-20 text-center text-primary">공업수학1</p>

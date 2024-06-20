@@ -3,10 +3,13 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar';
 
 
 const ProfileImg = ({border, size, point}:{border: number, size:number, point:number}) => {
-  const [color, setcolor] = useState<string>("");
+  const [color, setcolor] = useState<string>("bronze");
 
   const colorDecide = (point:number) => {
-    {(point <= 100) ? setcolor("bronze") : (point <= 200) ? setcolor("silver") : (point <= 300) ? setcolor("gold") : setcolor("platinum")}
+    {(point <= 100) ? setcolor("bronze") 
+    : (point <= 200) ? setcolor("silver") 
+    : (point <= 300) ? setcolor("gold") 
+    : setcolor("platinum")}
    }
    
    useEffect(() => {
