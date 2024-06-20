@@ -1,29 +1,32 @@
-import "./App.css";
-import Login from "@/pages/Login";
-import Register from "@/pages/Register";
-import RegisterDone from "@/pages/RegisterDone";
-import LectureRegister from "@/pages/LectureRegister";
-import Navbar from "./components/ui/navbar";
-import BasicModify from "./pages/Profile/BasicModify";
-import MentorModify from "./pages/Profile/MentorModify";
-import Main from "./pages/MainPage";
-import MyProfile from "./pages/Profile/MyProfile";
-import Error from "./pages/Error";
-import Admin from "./pages/Admin";
-import { Routes, Route, Outlet } from "react-router-dom";
-import Footer from "./components/ui/Footer";
-
-
+import './App.css';
+import Login from '@/pages/Login';
+import Register from '@/pages/Register';
+import RegisterDone from '@/pages/RegisterDone';
+import LectureRegister from '@/pages/LectureRegister';
+import MentorList from '@/pages/MentorList';
+import MentorRank from '@/pages/MentorRank';
+import Apply from './pages/Apply';
+import Navbar from './components/ui/navbar';
+import BasicModify from './pages/Profile/BasicModify';
+import MentorModify from './pages/Profile/MentorModify';
+import Main from './pages/MainPage';
+import MyProfile from './pages/Profile/MyProfile';
+import Error from './pages/Error';
+import Admin from './pages/Admin';
+import { Routes, Route, Outlet } from 'react-router-dom';
+import Footer from './components/ui/Footer';
 
 const Home = () => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <Outlet />
+      <div className="flex-grow">
+        <Outlet />
+      </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 function App() {
   return (
@@ -38,16 +41,18 @@ function App() {
     // </div>
     <div>
       <Routes>
-        <Route path="/" element={<Home />} >
+        <Route path="/" element={<Home />}>
           <Route index element={<Main />} />
           <Route path="myprofile" element={<MyProfile />} />
           <Route path="basicmodify" element={<BasicModify />} />
           <Route path="mentormodify" element={<MentorModify />} />
-          <Route path="admin" element={<Admin />} />       
+          <Route path="admin" element={<Admin />} />
+          <Route path="mentorlist" element={<MentorList />} />
+          <Route path="mentorrank" element={<MentorRank />} />
+          <Route path="apply" element={<Apply />} />
         </Route>
       </Routes>
     </div>
-
   );
 }
 
