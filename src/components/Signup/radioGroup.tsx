@@ -1,23 +1,38 @@
-import { Field, Label, Radio, RadioGroup as HeadlessRadioGroup } from '@headlessui/react'
-import { useState } from 'react'
+import {
+  Field,
+  Label,
+  Radio,
+  RadioGroup as HeadlessRadioGroup,
+} from "@headlessui/react";
+import { useController, useFormContext } from "react-hook-form";
 
-interface Item<T> {
+interface RadioItem<T> {
   id: number;
   name: string;
   value: T;
 }
 
-interface Props<T> {
+interface RadioGroupProps<T> {
+  name: string;
+  items: RadioItem<T>[];
+  required?: boolean;
   className?: string;
-  items: Item<T>[];
 }
 
-export default function RadioGroup<T>(props: Props<T>) {
-  const items = props.items;
-  const [selected, setSelected] = useState(items[0])
+export default function RadioGroup<T>({
+  name,
+  required = false,
+  className,
+  items,
+}: RadioGroupProps<T>) {
+  const { control } = useFormContext();
+  const { field } = useController({ control, name, rules: { required } });
 
   return (
-    <HeadlessRadioGroup value={selected} onChange={setSelected} className={`flex flex-row gap-8 ${props.className}`}>
+    <HeadlessRadioGroup
+      {...field}
+      className={`flex flex-row gap-8 ${className}`}
+    >
       {items.map((item) => (
         <Field key={item.id} className="flex items-center gap-2">
           <Radio
@@ -26,9 +41,11 @@ export default function RadioGroup<T>(props: Props<T>) {
           >
             <span className="invisible size-2 rounded-full bg-black group-data-[checked]:visible" />
           </Radio>
-          <Label className="font-sans font-normal text-12 align-middle">{item.name}</Label>
+          <Label className="font-sans font-normal text-12 align-middle">
+            {item.name}
+          </Label>
         </Field>
       ))}
     </HeadlessRadioGroup>
-  )
+  );
 }
