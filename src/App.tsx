@@ -43,6 +43,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}>
           <Route index element={<Main />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
           <Route path="myprofile" element={<MyProfile />} />
           <Route path="basicmodify" element={<BasicModify />} />
           <Route path="mentormodify" element={<MentorModify />} />
