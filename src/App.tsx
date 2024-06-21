@@ -15,6 +15,7 @@ import Error from './pages/Error';
 import Admin from './pages/Admin';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Footer from './components/ui/Footer';
+import Loading from './components/Loading';
 
 const Home = () => {
   return (
@@ -48,6 +49,7 @@ function App() {
           <Route path="mentormodify" element={<MentorModify />} />
           <Route path="admin" element={<Admin />} />
           <Route path="error" element={<Error />} />
+          <Route path="loading" element={<Loading />} />
           <Route path="mentorlist" element={<MentorList />} />
           <Route path="mentorrank" element={<MentorRank />} />
           <Route path="apply" element={<Apply />} />
