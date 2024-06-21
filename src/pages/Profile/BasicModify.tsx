@@ -50,7 +50,7 @@ const BasicModify = () => {
 
   return (
     <>
-      <div className='flex justify-center mt-100 mb-200 '>
+      <div className='flex justify-center mt-130 mb-200 '>
         <div className='w-480 border-1 rounded-md '>
           <div className='w-400 mt-12 mb-10 mx-auto '>
             <h2 className='h2 text-start mb-12'>기본 정보 수정</h2>
@@ -110,14 +110,10 @@ const BasicModify = () => {
                 취소
               </Button>
             </div>
-            <div>
-              <Input2 label="닉네임" placeholder="이송희"/>
-              <Input2 label="닉네임" placeholder="pasongtak" />
-            </div>
+            
           </div>
         </div>
       </div>
-      <Footer />
       
     </>
   )

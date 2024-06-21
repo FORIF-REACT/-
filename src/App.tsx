@@ -47,6 +47,7 @@ function App() {
           <Route path="basicmodify" element={<BasicModify />} />
           <Route path="mentormodify" element={<MentorModify />} />
           <Route path="admin" element={<Admin />} />
+          <Route path="error" element={<Error />} />
           <Route path="mentorlist" element={<MentorList />} />
           <Route path="mentorrank" element={<MentorRank />} />
           <Route path="apply" element={<Apply />} />

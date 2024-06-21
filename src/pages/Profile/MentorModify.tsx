@@ -59,7 +59,7 @@ const BasicModify = () => {
 
   return (
     <>
-      <div className='flex justify-center mt-100 mb-200'>
+      <div className='flex justify-center mt-130 mb-200'>
           <div className='w-480 border-1 rounded-md '>
             <div className='w-400 mt-12 mb-10 mx-auto '>
               <h2 className='h2 text-start mb-12'>멘토 정보 수정</h2>
@@ -151,7 +151,6 @@ const BasicModify = () => {
           </div>
       </div>
             
-      <Footer />
     </>
   )
 }
