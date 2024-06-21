@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
-import { focusState } from "@/Atoms";
+import { focusState } from "@/Atoms/Atoms";
 
 interface Props {
   className?: string;

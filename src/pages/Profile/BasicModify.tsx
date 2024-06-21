@@ -1,9 +1,7 @@
 import FormContent from '@/components/Signup/formContent'
 import Input from '@/components/Signup/input'
-import Input2 from '@/components/input2'
 import RadioGroup from '@/components/Signup/radioGroup'
 import Select from '@/components/Signup/select'
-import Footer from '@/components/ui/Footer'
 import Button from '@/components/ui/button'
 import {
   Dialog,
@@ -53,7 +51,7 @@ const BasicModify = () => {
       <div className='flex justify-center mt-130 mb-200 '>
         <div className='w-480 border-1 rounded-md '>
           <div className='w-400 mt-12 mb-10 mx-auto '>
-            <h2 className='h2 text-start mb-12'>기본 정보 수정</h2>
+            <h1 className='h2 text-start mb-12'>기본 정보 수정</h1>
             <div className="flex flex-col gap-5">
               <FormContent label="이메일">
                 <div className="flex items-center font-normal text-12">

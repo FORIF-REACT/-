@@ -1,4 +1,4 @@
-import { focusState } from "@/Atoms";
+import { focusState } from "@/Atoms/Atoms";
 import { ReactNode, useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 

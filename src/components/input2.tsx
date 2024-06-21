@@ -1,4 +1,4 @@
-import { focusState } from '@/Atoms'
+import { focusState } from '@/Atoms/Atoms'
 import { useEffect, useState } from 'react'
 import { useRecoilState } from 'recoil'
 
