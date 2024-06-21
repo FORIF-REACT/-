@@ -1,8 +1,4 @@
-import Footer from '@/components/ui/Footer'
-import Navbar from '@/components/ui/navbar'
 import AdminComponent from '@/components/Admin/AdminComponent'
-
-import React from 'react'
 
 const Admin = () => {
   return (

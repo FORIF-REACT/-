@@ -6,24 +6,16 @@ const ProfileImg = ({size, point}:{ size:number, point:number}) => {
   const [color, setcolor] = useState<string>("bronze");
 
   const colorDecide = (point:number) => {
-    
-    if (point >= 300 ) {
-      setcolor("platinum"); 
-    } else if (point >= 200) {
-      setcolor("gold");
-    } else if (point >= 100) {
-      setcolor("silver"); 
-    } else {
-      setcolor("bronze")
-    }
-
+    { (point < 100) ? setcolor("bronze")
+    : (point < 200) ? setcolor("silver")
+    : (point < 300) ? setcolor("gold")
+    : setcolor("platinum")}
    }
    
    useEffect(() => {
     colorDecide(point)
    }, [point])
    
-
   return (
     <div className={`w-[calc((${size} + 4) * 4px)] h-[calc((${size} + 4) * 4px)] border-4 border-${color} rounded-full`}>
       <Avatar className={`w-${size} h-${size}`} >

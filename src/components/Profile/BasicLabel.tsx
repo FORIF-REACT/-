@@ -6,7 +6,7 @@ interface Props {
 
 const BasicLabel = ({title, content, className}: Props) => {
   return (
-    <div className={`flex w-[360px] h-9 border-l justify-items-start items-center ${className}`}>
+    <div className={`w-[360px] h-9 border-l flex items-center ${className}`}>
       <div className='w-[74px] ml-5 text-12 text-darkgray'>
         {title}
       </div>

@@ -75,6 +75,7 @@
   body {
     @apply bg-background text-foreground;
   }
+
 }
 
 @layer components {
@@ -86,7 +87,3 @@
   }
 }
 
-@font-face {
-  font-family: 'Noto Sans';
-  src: url('')
-}

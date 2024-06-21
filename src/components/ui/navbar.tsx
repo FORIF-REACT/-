@@ -165,7 +165,7 @@ export default function Navbar() {
                         onClick={() => navigate("")}
                         className={classNames(
                           // focus ? "bg-gray-100" : "",
-                          'block box-border border-primary border-2 mx-4 my-2 py-1 rounded-md text-14 text-primary text-center duration-300 hover:bg-primary hover:text-white'
+                          'block box-border border-primary border-2 mx-4 my-2 py-1 rounded-md text-14 text-primary text-center duration-300 hover:bg-primary hover:text-white cursor-pointer'
                         )}
                       >
                         Sign out

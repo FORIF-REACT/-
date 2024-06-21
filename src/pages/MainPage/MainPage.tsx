@@ -1,19 +1,16 @@
-import React,  { Component, useRef }from "react";
-
+import { useRef }from "react";
+import ProfileComponent from "@/components/Profile/ProfileComponent";
+import ProfileImg from "@/components/Profile/ProfileImg";
+import './MainPage.css'
+import TypeIt from "typeit-react";
 import { PiNotePencilBold, PiStudentDuotone, PiChalkboardTeacher } from "react-icons/pi";
-import { FaCrown } from "react-icons/fa6";
-import { GiCrenelCrown, GiImperialCrown } from "react-icons/gi";
-
+import { GiCrenelCrown } from "react-icons/gi";
 
 import {
   Dialog,
   DialogContent,
   DialogTrigger
 } from "@/components/ui/Dialog"
-
-import ProfileComponent from "@/components/Profile/ProfileComponent";
-import ProfileImg from "@/components/Profile/ProfileImg";
-
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -23,12 +20,7 @@ import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import TypeIt from "typeit-react";
-
-import './MainPage.css'
-
 gsap.registerPlugin(useGSAP, ScrollTrigger)
-
 
 interface ProfileProps {
   username: string;
@@ -129,10 +121,10 @@ const Main = () => {
 
   return (
     <>
-      <div className='w-page mx-auto my-240 trigger' ref={container}>
+      <div className='w-page mx-auto mt-300 mb-240 trigger' ref={container}>
 
       {/* 메인1 */}
-        <section className=' w-960 mx-auto mb-180 flex justify-between items-center  ' >
+        <section className='w-960 mx-auto mb-180 flex justify-between items-center'>
           <div>
             <p className='text-20 text-placeholder'>한양대 학생들의 학점을 책임지는</p>
             <TypeIt element="h1" className='text-70 font-logo mb-6 bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent'>
@@ -152,7 +144,7 @@ const Main = () => {
             <PiStudentDuotone size={200} />
             <PiChalkboardTeacher size={200}/>
           </div>
-          <p className='w-full h-auto text-center text-36 up2'>회원가입 시 <strong className="bg-gradient-to-r from-[#382A83] to-primary bg-clip-text text-transparent" >멘티</strong>, 수업 개설 시 <strong className="bg-gradient-to-r from-[#382A83] to-primary bg-clip-text text-transparent">멘토와 멘티</strong> 모두 가능!</p>
+          <p className='w-full h-auto text-center text-36 up2'>회원가입 시 <strong className="bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent" >멘티</strong>, 수업 개설 시 <strong className="bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent">멘토와 멘티</strong> 모두 가능!</p>
         </section>
 
       {/* 멘토 랭킹 */}
