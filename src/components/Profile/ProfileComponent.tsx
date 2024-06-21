@@ -1,7 +1,7 @@
 import BasicLabel from './BasicLabel'
 import Tag from '../ui/Tag'
 import MentorLabel from './MentorLabel'
-import ProfileImg from '../ProfileImg'
+import ProfileImg from '../Profile/ProfileImg'
 
 const Profile = () => {
 

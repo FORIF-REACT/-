@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import ProfileImg from '../ProfileImg';
+import ProfileImg from '../Profile/ProfileImg';
 
 export interface ListBoxProps {
   name: string;

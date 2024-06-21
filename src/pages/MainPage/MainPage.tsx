@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/Dialog"
 
 import ProfileComponent from "@/components/Profile/ProfileComponent";
-import ProfileImg from "@/components/ProfileImg";
+import ProfileImg from "@/components/Profile/ProfileImg";
 
 
 import Slider from "react-slick";
