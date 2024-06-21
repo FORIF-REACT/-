@@ -1,6 +1,5 @@
 import FormContent from '@/components/Signup/formContent'
 import Input from '@/components/Signup/input'
-import Input2 from '@/components/input2'
 import RadioGroup from '@/components/Signup/radioGroup'
 import Select from '@/components/Signup/select'
 import Footer from '@/components/ui/Footer'
@@ -109,10 +108,6 @@ const BasicModify = () => {
               <Button variant="default" size="default" onClick={() => navigate("/myprofile")}>
                 취소
               </Button>
-            </div>
-            <div>
-              <Input2 label="닉네임" placeholder="이송희"/>
-              <Input2 label="닉네임" placeholder="pasongtak" />
             </div>
           </div>
         </div>
