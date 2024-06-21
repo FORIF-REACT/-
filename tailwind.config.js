@@ -8,6 +8,12 @@ module.exports = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  safelist: [
+    'border-platinum',
+    'border-gold',
+    'border-silver',
+    'border-bronze' 
+  ],
   prefix: "",
   theme: {
     container: {
