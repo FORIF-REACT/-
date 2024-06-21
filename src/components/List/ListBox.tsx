@@ -59,7 +59,7 @@ const ListBox: React.FC<ListBoxProps> = ({
           'relative border-[#717D8D] bg-[#FBFDFF] box-border border rounded-[10px] filter drop-shadow-[0_0_10px_rgba(0,0,0,0.1)] w-full max-w-[896px] h-[76px] flex items-center p-4'
         )}
       >
-        <div className="flex items-center w-full gap-2">
+        <div className="flex items-center w-full gap-4">
           <div className="flex items-center w-32 gap-2">
             <ProfileImg size={10} point={point} />
             <div className="w-24 flex flex-col text-16">
@@ -72,15 +72,15 @@ const ListBox: React.FC<ListBoxProps> = ({
             <h1>{major1}</h1>
             <h1>{major2}</h1>
           </div>
-          <div className="flex flex-col  w-24">
+          <div className="flex flex-col  w-24 ml-2">
             <h1>{location1}</h1>
             <h1>{location2}</h1>
           </div>
-          <div className="w-24 ml-1">{subject}</div>
-          <div className="w-[88px]">{method}</div>
+          <div className="w-24 ml-2">{subject}</div>
+          <div className="w-24">{method}</div>
           <div className="w-20">{meeting}</div>
           <button
-            className="box-sizing border-box flex justify-center items-center gap-10 w-16 h-8 bg-white border-3 border-[#7C6DD1] rounded-full"
+            className="box-sizing border-box flex justify-center items-center gap-10 w-16 h-8 bg-white border-3 border-[#7C6DD1] rounded-full w-20"
             onClick={handleButtonClick}
           >
             <span className="text-[#7C6DD1] text-12">신청하기</span>

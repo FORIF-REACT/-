@@ -136,7 +136,7 @@ export default function MentorList() {
               <span className="ml-10">전공</span>
               <span className="ml-28">선호지역</span>
               <span className="ml-14">강의과목</span>
-              <span className="ml-14">강의방식</span>
+              <span className="ml-12">강의방식</span>
               <span className="ml-12">강의형태</span>
             </div>
 
