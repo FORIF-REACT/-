@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useLocation } from 'react-router-dom';
 import ApplyInfo from '@/components/ApplyForm/ApplyInfo';
+import ApplyInput from '@/components/ApplyForm/ApplyInput'; 
+import Button from '@/components/ui/button'; 
 
 export default function Apply() {
   const location = useLocation();
@@ -16,6 +18,12 @@ export default function Apply() {
     method,
     meeting,
   } = location.state || {};
+
+  const [message, setMessage] = React.useState("");
+
+  const handleSubmit = () => {
+    console.log("Submitted text:", message);
+  };
 
   return (
     <div className="w-full h-auto flex items-center">
@@ -50,9 +58,27 @@ export default function Apply() {
             meeting={meeting}
           />
 
-          <h1 className="text-24 font-semibold mt-12 mb-4">
+          <h1 className="text-24 font-semibold mt-14 mb-4">
             과외 신청 쪽지 보내기
           </h1>
+        
+          <div className='mb-12 flex flex-col items-center'>
+            <ApplyInput 
+              rows={8} 
+              placeholder="문의하고 싶은 내용을 자세하게 적어주세요!"
+              className="flex-1"
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <Button
+              variant="default"
+              size="default"
+              onClick={handleSubmit}
+              className="mt-4 w-24"
+            >
+              쪽지 보내기
+            </Button>
+          </div>
+
         </div>
       </div>
     </div>
