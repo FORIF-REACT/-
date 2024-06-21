@@ -12,10 +12,10 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useNavigate } from 'react-router-dom';
 
 const navigation = [
-  { name: '과외 신청', href: './mentorlist', current: true },
-  { name: '내 수업', href: '#', current: false },
-  { name: '멘토 랭킹', href: './mentorrank', current: false },
-  { name: '평가하기', href: '#', current: false },
+  { name: '과외 신청', path: '/mentorlist', current: true },
+  { name: '내 수업', path: '#', current: false },
+  { name: '멘토 랭킹', path: '/mentorrank', current: false },
+  { name: '평가하기', path: '#', current: false },
 ];
 
 const name = '닉네임';
@@ -58,16 +58,16 @@ export default function Navbar() {
           </button>
           <div className="mx-auto max-w-[1100px] w-page px-page flex flex-row items-center justify-between">
             {navigation.map((item) => (
-              <a
+              <p
                 key={item.name}
-                href={item.href}
+                onClick={() => { navigate(item.path) }}
                 className={classNames(
-                  "rounded-md px-3 py-2 text-sm text-muted hover:text-black"
+                  "rounded-md px-3 py-2 text-sm text-muted hover:text-black cursor-pointer"
                 )}
                 aria-current={item.current ? 'page' : undefined}
               >
                 {item.name}
-              </a>
+              </p>
             ))}
           </div>
           <div className="absolute right-24 flex items-center">
@@ -123,53 +123,53 @@ export default function Navbar() {
                 <MenuItems className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                   <MenuItem>
                     {({ focus }) => (
-                      <a
-                        href="./myprofile"
+                      <p
+                        onClick={() => navigate("/myprofile")}
                         className={classNames(
                           focus ? 'text-black' : '',
-                          'block px-3 pt-3 pb-2 mx-3 text-14 text-muted hover:text-black'
+                          'block px-3 pt-3 pb-2 mx-3 text-14 text-muted hover:text-black cursor-pointer'
                         )}
                       >
                         내 프로필
-                      </a>
+                      </p>
                     )}
                   </MenuItem>
                   <MenuItem>
                     {({ focus }) => (
-                      <a
-                        href="./basicmodify"
+                      <p
+                        onClick={() => navigate("/basicmodify")}
                         className={classNames(
                           focus ? 'text-black' : '',
-                          'block px-3 py-2 mx-3 text-14 text-muted hover:text-black'
+                          'block px-3 py-2 mx-3 text-14 text-muted hover:text-black cursor-pointer'
                         )}
                       >
                         기본 정보 수정
-                      </a>
+                      </p>
                     )}
                   </MenuItem>
                   <MenuItem>
                     {({ focus }) => (
-                      <a
-                        href="./mentormodify"
+                      <p
+                        onClick={() => navigate("/mentormodify")}
                         className={classNames(
-                          'block px-3 pt-2 pb-2 mx-3 text-14 text-muted hover:text-black'
+                          'block px-3 pt-2 pb-2 mx-3 text-14 text-muted hover:text-black cursor-pointer'
                         )}
                       >
                         멘토 정보 수정
-                      </a>
+                      </p>
                     )}
                   </MenuItem>
                   <MenuItem>
                     {({ focus }) => (
-                      <a
-                        href="#"
+                      <p
+                        onClick={() => navigate("")}
                         className={classNames(
                           // focus ? "bg-gray-100" : "",
                           'block box-border border-primary border-2 mx-4 my-2 py-1 rounded-md text-14 text-primary text-center duration-300 hover:bg-primary hover:text-white'
                         )}
                       >
                         Sign out
-                      </a>
+                      </p>
                     )}
                   </MenuItem>
                 </MenuItems>
@@ -182,8 +182,8 @@ export default function Navbar() {
               {navigation.map((item) => (
                 <DisclosureButton
                   key={item.name}
-                  as="a"
-                  href={item.href}
+                  as="p"
+                  onClick={() => navigate(item.path)}
                   className={classNames(
                     item.current
                       ? 'bg-gray-900 text-white'

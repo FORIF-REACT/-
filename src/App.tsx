@@ -9,7 +9,7 @@ import Apply from './pages/Apply';
 import Navbar from './components/ui/navbar';
 import BasicModify from './pages/Profile/BasicModify';
 import MentorModify from './pages/Profile/MentorModify';
-import Main from './pages/MainPage';
+import Main from './pages/MainPage/MainPage';
 import MyProfile from './pages/Profile/MyProfile';
 import Error from './pages/Error';
 import Admin from './pages/Admin';
@@ -47,6 +47,7 @@ function App() {
           <Route path="basicmodify" element={<BasicModify />} />
           <Route path="mentormodify" element={<MentorModify />} />
           <Route path="admin" element={<Admin />} />
+          <Route path="error" element={<Error />} />
           <Route path="mentorlist" element={<MentorList />} />
           <Route path="mentorrank" element={<MentorRank />} />
           <Route path="apply" element={<Apply />} />
