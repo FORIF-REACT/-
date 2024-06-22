@@ -14,6 +14,7 @@ interface MentiProfile {
   preferDay: string;
   preferTime: string;
   numberOfClasses: number;
+  applyContent: string;
 }
 
 const MentiDetailContainer: React.FC<MentiProfile> = ({
@@ -29,6 +30,7 @@ const MentiDetailContainer: React.FC<MentiProfile> = ({
   preferDay,
   preferTime,
   numberOfClasses,
+  applyContent
 }) => {
   return (
     <div className="min-w-[352px] min-h-[506px] bg-[#FBFDFF] mr-[31px] relative rounded-[7px] shadow-md">
@@ -100,7 +102,7 @@ const MentiDetailContainer: React.FC<MentiProfile> = ({
       <div className="mt-[20px] ml-[16px] w-[320px] h-[148px]">
         <span className="block text-[16px] font-normal text-[#000000]">작성한 내용</span>
         <ScrollArea className="flex-grow mt-[12px] w-[320px] h-[120px] rounded-[7px] shadow-sm">
-          <div className="py-[5px] text-[10px] font-medium text-[#000000]">안녕하세요!</div>
+          <div className="py-[5px] text-[10px] font-medium text-[#000000]">{applyContent}</div>
         </ScrollArea>
       </div>
     </div>

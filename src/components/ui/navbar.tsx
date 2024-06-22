@@ -13,9 +13,9 @@ import { useNavigate } from 'react-router-dom';
 
 const navigation = [
   { name: '과외 신청', path: '/mentorlist', current: true },
-  { name: '내 수업', path: '/MyClassMentor', current: false },
+  { name: '내 수업', path: '/myclassmentor', current: false },
   { name: '멘토 랭킹', path: '/mentorrank', current: false },
-  { name: '평가하기', path: '/Evaluation', current: false },
+  { name: '평가하기', path: '/evaluation', current: false },
 ];
 
 const name = '닉네임';
