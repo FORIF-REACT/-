@@ -8,7 +8,7 @@ interface Profile {
   major: string;
   preferRegion: string;
   lectureName: string;
-  lectureContent: string;
+  applyContent: string;
 }
 
 const MentorDetailContainerEnd: React.FC<Profile> = ({
@@ -18,7 +18,7 @@ const MentorDetailContainerEnd: React.FC<Profile> = ({
   major,
   preferRegion,
   lectureName,
-  lectureContent,
+  applyContent,
 }) => {
   return (
     <div className="min-w-[352px] min-h-[478px] bg-[#FBFDFF] mr-[31px] relative rounded-[7px] shadow-md">
@@ -63,7 +63,7 @@ const MentorDetailContainerEnd: React.FC<Profile> = ({
       <div className="mt-[20px] ml-[16px] w-[320px] h-[248px]">
         <span className="block text-[16px] font-normal text-[#000000]">신청 내용</span>
         <ScrollArea className="flex-grow mt-[12px] w-[320px] h-[220px] rounded-[7px] shadow-sm">
-          <div className="py-[5px] text-[10px] font-medium text-[#000000]">{lectureContent}</div>
+          <div className="py-[5px] text-[10px] font-medium text-[#000000]">{applyContent}</div>
         </ScrollArea>
       </div>
     </div>

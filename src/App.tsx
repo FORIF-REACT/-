@@ -58,9 +58,9 @@ function App() {
           <Route path="mentorlist" element={<MentorList />} />
           <Route path="mentorrank" element={<MentorRank />} />
           <Route path="apply" element={<Apply />} />
-          <Route path="Evaluation" element={<Evaluation />} />
-          <Route path="MyClassMentor" element={<MyClassMentor />} />
-          <Route path="MyClassMenti" element={<MyClassMenti />} />
+          <Route path="evaluation" element={<Evaluation />} />
+          <Route path="myclassmentor" element={<MyClassMentor />} />
+          <Route path="myclassmenti" element={<MyClassMenti />} />
         </Route>
       </Routes>
     </div>

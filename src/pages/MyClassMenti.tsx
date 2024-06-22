@@ -15,7 +15,8 @@ const profiles = [
     lectureContent: "공업수학1 이론을 바탕으로 한 기출 문제 풀이",
     preferDay: "월요일",
     preferTime: "6시",
-    numberOfClasses: 5
+    numberOfClasses: 5,
+    applyContent: "공업수학1을 배우고 싶습니다"
   },
   {
     profileImage: "path/to/image2.jpg",
@@ -30,7 +31,8 @@ const profiles = [
     lectureContent: "경영학 원론 이론과 사례 분석",
     preferDay: "화요일",
     preferTime: "10시",
-    numberOfClasses: 10
+    numberOfClasses: 10,
+    applyContent: "경영학 원론을 배우고 싶습니다"
   },
   // 필요에 따라 더 많은 객체 추가 가능
 ];
@@ -44,7 +46,7 @@ export default function MyClassMenti() {
         {/* 왼쪽 메뉴 */}
         <div className="relative mt-[100px] ml-[164px] min-w-[128px] h-[124px] flex flex-col items-center justify-center">
           <span className="font-semibold text-[36px]">내 수업</span>
-          <SideMenu menu1="멘티 강의" path1="/MyClassMenti" menu2="멘토 강의" path2="/MyClassMentor" />
+          <SideMenu menu1="멘티 강의" path1="/myclassmenti" menu2="멘토 강의" path2="/myclassmentor" />
         </div> 
         
         {/* 오른쪽 컨테이너 */}

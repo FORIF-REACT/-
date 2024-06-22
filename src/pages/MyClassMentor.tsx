@@ -11,7 +11,7 @@ const profiles = [
     major: "공과대학 산업공학과",
     preferRegion: "서울특별시 양천구",
     lectureName: "공업수학1",
-    lectureContent: "공업수학1 이론을 바탕으로 한 기출 문제 풀이"
+    applyContent: "공업수학1 이론을 바탕으로 한 기출 문제 풀이"
   },
   {
     username: "사용자2",
@@ -20,7 +20,7 @@ const profiles = [
     major: "공과대학 산업공학과",
     preferRegion: "서울특별시 강남구",
     lectureName: "미적분학1",
-    lectureContent: "미적분학1 이론을 바탕으로 한 기출 문제 풀이"
+    applyContent: "미적분학1 이론을 바탕으로 한 기출 문제 풀이"
   },
   // 필요에 따라 더 많은 객체 추가 가능
 ];
