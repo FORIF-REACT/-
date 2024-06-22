@@ -1,4 +1,5 @@
 import Tag from '@/components/ui/Tag';
+import ProfileImg from '../Profile/ProfileImg';
 
 export default function MentiEvalContainer() {
   return (
@@ -9,7 +10,7 @@ export default function MentiEvalContainer() {
         {/* 프로필 사진(닉네임) 컨테이너 */}
         <div className="w-[72px] h-[96px] bg-[#FBFDFF] flex flex-col items-center ml-[36px] mt-[22px]">
           {/* 프로필 사진 */}
-          <div className="w-[72px] h-[72px] bg-gray-300 rounded-full"></div>
+          <ProfileImg size={10} point={100} />  {/*point 변수로 받기(파라미터 형태) */}
           {/* 닉네임 */}
           <span className="mt-[8px] text-[16px] font-normal text-[#000000]">닉네임</span>
         </div>

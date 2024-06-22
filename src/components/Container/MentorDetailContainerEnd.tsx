@@ -1,7 +1,7 @@
 import { ScrollArea } from "@/components/ui/scroll-area"; // ShadCN의 Scroll Area 컴포넌트를 임포트합니다.
 import ProfileImg from "../Profile/ProfileImg";
 
-const MentorDetailContainer = () => {
+const MentorDetailContainerEnd = () => {
   return (
     <div className="min-w-[352px] min-h-[478px] bg-[#FBFDFF] mr-[31px] relative rounded-[7px] shadow-md">
       
@@ -10,7 +10,7 @@ const MentorDetailContainer = () => {
         {/* 프로필 사진(닉네임) 컨테이너 */}
         <div className="w-[72px] h-[96px] bg-[#FBFDFF] flex flex-col items-center ml-[20px] mt-[22px]">
           {/* 프로필 사진 */}
-          <ProfileImg size={10} point={100} />
+          <ProfileImg size={10} point={100} />  {/*point 변수로 받기(파라미터 형태) */}
           {/* 닉네임 */}
           <span className="mt-[8px] text-[16px] font-normal text-[#000000]">닉네임</span>
         </div>
@@ -63,18 +63,6 @@ const MentorDetailContainer = () => {
   started laughing, they couldn't stop.</div>
         </ScrollArea>
 
-        <div className="mt-[20px] flex justify-center items-center space-x-4">
-          <button className="box-border flex justify-center items-center gap-2 w-20 h-8 bg-[#7C6DD1] border-2 border-[#7C6DD1] rounded-full"> {/* onClick={메소드} */}
-            <span className="text-[#FFFFFF] text-[12px]">수락하기</span>
-          </button>
-
-          <button className="box-border flex justify-center items-center gap-2 w-20 h-8 bg-white border-2 border-[#7C6DD1] rounded-full"> {/* onClick={메소드} */}
-            <span className="text-[#7C6DD1] text-[12px]">거절하기</span>
-          </button>
-        </div>
-        
-
-          
       </div>
     </div>
 
@@ -82,4 +70,4 @@ const MentorDetailContainer = () => {
   );
 }
 
-export default MentorDetailContainer
+export default MentorDetailContainerEnd
