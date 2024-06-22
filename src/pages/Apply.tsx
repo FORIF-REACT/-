@@ -4,6 +4,7 @@ import ApplyInfo from '@/components/ApplyForm/ApplyInfo';
 import ApplyInput from '@/components/ApplyForm/ApplyInput';
 import Button from '@/components/ui/button';
 import { Alert, AlertOption } from '@/components/ApplyForm/ApplyModal';
+import ProfileImg from '@/components/Profile/ProfileImg';
 
 export default function Apply() {
   const location = useLocation();
@@ -19,6 +20,7 @@ export default function Apply() {
     subject,
     method,
     meeting,
+    point,
   } = location.state || {};
 
   const [message, setMessage] = React.useState("");
@@ -53,12 +55,8 @@ export default function Apply() {
             </h1>
           </div>
 
-          <div className="flex items-center flex-col gap-4">
-            <div
-              className="flex items-center justify-center border-4 rounded-full w-[148px] h-[148px] border-[#B7F1F9]"
-            >
-              <div className="bg-[#D9D9D9] rounded-full w-32 h-32"></div>
-            </div>
+          <div className="flex items-center flex-col gap-4 mt-8">
+            <ProfileImg size={40} point={point} />
             <h1 className="text-24">{name}</h1>
           </div>
 

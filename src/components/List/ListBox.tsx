@@ -48,6 +48,7 @@ const ListBox: React.FC<ListBoxProps> = ({
         method,
         meeting,
         tier,
+        point,
       },
     });
   };
