@@ -148,7 +148,7 @@ const Main = () => {
         </section>
 
         <section>
-          <img src="../../../public/image.jpeg" className="" />
+          <img src="/image.jpeg" className="" />
         </section>
 
       {/* 멘토 랭킹 */}
