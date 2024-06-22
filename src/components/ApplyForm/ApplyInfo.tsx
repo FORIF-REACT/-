@@ -1,5 +1,5 @@
 import * as React from 'react';
-import InfoRow from '@/components/ApplyForm/InfoRow'; // InfoRow 컴포넌트를 불러옵니다.
+import InfoRow from '@/components/ApplyForm/InfoRow'; 
 
 interface ApplyInfoProps {
   year: number;

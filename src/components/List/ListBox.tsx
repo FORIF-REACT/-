@@ -57,7 +57,7 @@ const ListBox: React.FC<ListBoxProps> = ({
     <div className={cn('flex justify-center text-12 font-sans')}>
       <div
         className={cn(
-          'relative border-[#717D8D] bg-[#FBFDFF] box-border border rounded-[10px] filter drop-shadow-[0_0_10px_rgba(0,0,0,0.1)] w-full max-w-[896px] h-[76px] flex items-center p-4'
+          'relative border-[#cdd6e2] bg-[#FBFDFF] box-border border rounded-[10px] filter drop-shadow-[0_0_10px_rgba(0,0,0,0.1)] w-full max-w-[896px] h-[76px] flex items-center p-4'
         )}
       >
         <div className="flex items-center w-full gap-4">
