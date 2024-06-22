@@ -57,6 +57,8 @@ function MentorRank() {
           <RankBox rank={9} point={600} name="구기정" tier="브론즈" />
           <RankBox rank={10} point={500} name="십기정" tier="브론즈" />
         </div>
+        
+
       </div>
     </div>
   );
