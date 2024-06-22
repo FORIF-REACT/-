@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {ChangeEvent, useState} from 'react';
 import ListBox from '@/components/List/ListBox';
 
 const mentors = [
@@ -127,15 +127,15 @@ export default function MentorList() {
   const [selectedMethod, setSelectedMethod] = useState('강의방식');
   const [selectedMeeting, setSelectedMeeting] = useState('강의형태');
 
-  const handleSubjectChange = (e) => {
+  const handleSubjectChange = (e:ChangeEvent<HTMLSelectElement>) => {
     setSelectedSubject(e.target.value);
   };
 
-  const handleMethodChange = (e) => {
+  const handleMethodChange = (e:ChangeEvent<HTMLSelectElement>) => {
     setSelectedMethod(e.target.value);
   };
 
-  const handleMeetingChange = (e) => {
+  const handleMeetingChange = (e:ChangeEvent<HTMLSelectElement>) => {
     setSelectedMeeting(e.target.value);
   };
 
