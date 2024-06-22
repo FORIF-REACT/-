@@ -3,6 +3,28 @@ import MentorDetailContainerIng from "@/components/Container/MentorDetailContain
 import MentorDetailContainerEnd from "@/components/Container/MentorDetailContainerEnd";
 import SideMenu from "@/components/Profile/SideMenu";
 
+const profiles = [
+  {
+    username: "사용자1",
+    gender: "여성",
+    admissionYear: 2021,
+    major: "공과대학 산업공학과",
+    preferRegion: "서울특별시 양천구",
+    lectureName: "공업수학1",
+    lectureContent: "공업수학1 이론을 바탕으로 한 기출 문제 풀이"
+  },
+  {
+    username: "사용자2",
+    gender: "남성",
+    admissionYear: 2020,
+    major: "공과대학 산업공학과",
+    preferRegion: "서울특별시 강남구",
+    lectureName: "미적분학1",
+    lectureContent: "미적분학1 이론을 바탕으로 한 기출 문제 풀이"
+  },
+  // 필요에 따라 더 많은 객체 추가 가능
+];
+
 export default function MyClassMentor() {
   return (
     <>
@@ -23,11 +45,9 @@ export default function MyClassMentor() {
 
               {/* 전달받은 정보 */}
               <div className="mt-[20px] w-full h-[518px] gap-[60px] overflow-x-auto flex">
-                <div className="min-w-[352px] h-[478px]"><MentorDetailContainer /></div>
-                <div className="min-w-[352px] h-[478px]"><MentorDetailContainer /></div>
-                <div className="min-w-[352px] h-[478px]"><MentorDetailContainer /></div>
-                <div className="min-w-[352px] h-[478px]"><MentorDetailContainer /></div>
-                <div className="min-w-[352px] h-[478px]"><MentorDetailContainer /></div>
+                {profiles.map((profile, index) => (
+                  <MentorDetailContainer key={index} {...profile} />
+                ))}
               </div>
 
               <div className="mt-[60px] w-full flex flex-col">
@@ -35,11 +55,9 @@ export default function MyClassMentor() {
 
                 {/* 전달받은 정보 */}
                 <div className="mt-[20px] w-full h-[518px] gap-[60px] overflow-x-auto flex">
-                  <div className="min-w-[352px] h-[478px]"><MentorDetailContainerIng /></div>
-                  <div className="min-w-[352px] h-[478px]"><MentorDetailContainerIng /></div>
-                  <div className="min-w-[352px] h-[478px]"><MentorDetailContainerIng /></div>
-                  <div className="min-w-[352px] h-[478px]"><MentorDetailContainerIng /></div>
-                  <div className="min-w-[352px] h-[478px]"><MentorDetailContainerIng /></div>
+                  {profiles.map((profile, index) => (
+                    <MentorDetailContainerIng key={index} {...profile} />
+                  ))}
                 </div>
 
                 <div className="mt-[60px] w-full flex flex-col">
@@ -47,11 +65,9 @@ export default function MyClassMentor() {
 
                   {/* 전달받은 정보 */}
                   <div className="mt-[20px] w-full h-[518px] gap-[60px] overflow-x-auto flex">
-                    <div className="min-w-[352px] h-[478px]"><MentorDetailContainerEnd /></div>
-                    <div className="min-w-[352px] h-[478px]"><MentorDetailContainerEnd /></div>
-                    <div className="min-w-[352px] h-[478px]"><MentorDetailContainerEnd /></div>
-                    <div className="min-w-[352px] h-[478px]"><MentorDetailContainerEnd /></div>
-                    <div className="min-w-[352px] h-[478px]"><MentorDetailContainerEnd /></div>
+                  {profiles.map((profile, index) => (
+                    <MentorDetailContainerEnd key={index} {...profile} />
+                  ))}
                   </div>
                 </div>
               </div>
