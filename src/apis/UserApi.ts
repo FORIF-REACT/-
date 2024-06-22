@@ -1,4 +1,8 @@
-import axios from "axios";
+import { get } from "./common";
+
+interface UserRequest {
+  email: string;
+}
 
 interface UserResponse {
   email: string;
@@ -12,5 +16,5 @@ interface UserResponse {
 export const findUserByEmail = async (email: string) => {
   const path = "/user";
   const params = { email };
-  return await axios.get(path, { params }).then((response) => response.data) as UserResponse;
+  return await get<UserRequest, UserResponse>(path, params);
 };
