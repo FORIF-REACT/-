@@ -23,7 +23,7 @@ const RankBox: React.FC<RankBoxProps> = ({ rank, point, name, tier }) => {
           'border-[#cdd6e2] bg-[#FBFDFF] box-border border rounded-[10px] filter drop-shadow-[0_0_10px_rgba(0,0,0,0.1)] w-[720px] h-[64px] flex items-center'
         )}
       >
-        <h1 className="font-normal text-[20px] ml-[24px]">{rank}</h1>
+        <h1 className="w-4 font-normal text-[20px] ml-[24px] flex justify-center">{rank}</h1>
 
         <div className="flex flex-row items-center box-brder w-[130px] h-[50px] ml-[12px]">
           <div
