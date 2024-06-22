@@ -1,4 +1,4 @@
-import * as React from 'react';
+import {useState} from 'react';
 import ListBox from '@/components/List/ListBox';
 
 const mentors = [
@@ -118,10 +118,38 @@ const mentors = [
   // ... 다른 멘토 객체 추가
 ];
 
+const subjects = ['미적분2', '공업수학1', '미적분1', '일반물리'];
+const methods = ['이론 위주'];
+const meetings = ['비대면', '대면'];
+
 export default function MentorList() {
+  const [selectedSubject, setSelectedSubject] = useState('강의과목');
+  const [selectedMethod, setSelectedMethod] = useState('강의방식');
+  const [selectedMeeting, setSelectedMeeting] = useState('강의형태');
+
+  const handleSubjectChange = (e) => {
+    setSelectedSubject(e.target.value);
+  };
+
+  const handleMethodChange = (e) => {
+    setSelectedMethod(e.target.value);
+  };
+
+  const handleMeetingChange = (e) => {
+    setSelectedMeeting(e.target.value);
+  };
+
+  const filteredMentors = mentors.filter(mentor => {
+    return (
+      (selectedSubject === '강의과목' || mentor.subject === selectedSubject) &&
+      (selectedMethod === '강의방식' || mentor.method === selectedMethod) &&
+      (selectedMeeting === '강의형태' || mentor.meeting === selectedMeeting)
+    );
+  });
+
   return (
     <div className="w-full h-auto flex items-center">
-      <div className="w-page h-auto max-w-[1100px] mx-auto ">
+      <div className="w-page h-auto max-w-[1100px] mx-auto">
         <div className="w-full max-w-[896px] mx-auto">
           <div className="mt-24 py-8">
             <h1 className="text-36 font-sans font-semibold text-[#000000] leading-[50px] tracking-[-0.007em]">
@@ -135,13 +163,32 @@ export default function MentorList() {
               <span className="ml-12">입학연도</span>
               <span className="ml-10">전공</span>
               <span className="ml-28">선호지역</span>
-              <span className="ml-14">강의과목</span>
-              <span className="ml-12">강의방식</span>
-              <span className="ml-12">강의형태</span>
+              
+              <select className='ml-12' value={selectedSubject} onChange={handleSubjectChange}>
+                <option value="강의과목">강의과목</option>
+                {subjects.map(subject => (
+                  <option key={subject} value={subject}>{subject}</option>
+                ))}
+              </select>
+              <select className='ml-6' value={selectedMethod} onChange={handleMethodChange}>
+                <option value="강의방식">강의방식</option>
+                {methods.map(method => (
+                  <option key={method} value={method}>{method}</option>
+                ))}
+              </select>
+              <select className='ml-6' value={selectedMeeting} onChange={handleMeetingChange}>
+                <option value="강의형태">강의형태</option>
+                {meetings.map(meeting => (
+                  <option key={meeting} value={meeting}>{meeting}</option>
+                ))}
+              </select>
+            
             </div>
 
+            
+
             <div className="flex flex-col gap-5">
-              {mentors.map((mentor, index) => (
+              {filteredMentors.map((mentor, index) => (
                 <ListBox
                   key={index}
                   tier={mentor.tier}
