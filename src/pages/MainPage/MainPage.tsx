@@ -121,10 +121,10 @@ const Main = () => {
 
   return (
     <>
-      <div className='w-page mx-auto mt-300 mb-240 trigger' ref={container}>
+      <div className='mx-auto mt-200 mb-240 trigger' ref={container}>
 
       {/* 메인1 */}
-        <section className='w-960 mx-auto mb-180 flex justify-between items-center'>
+        <section className='w-960 mx-auto flex justify-between items-center '>
           <div>
             <p className='text-20 text-placeholder'>한양대 학생들의 학점을 책임지는</p>
             <TypeIt element="h1" className='text-70 font-logo mb-6 bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent'>
@@ -139,45 +139,49 @@ const Main = () => {
         </section>
 
       {/* 메인2 */} 
-        <section className='w-full mx-auto my-450 trigger1' >
-          <div className='w-[500px] h-auto mx-auto mb-20 flex justify-between up1' >
-            <PiStudentDuotone size={200} />
-            <PiChalkboardTeacher size={200}/>
+        <div className='w-full h-550 mt-200 mb-200 trigger1 bg-gray-100 flex items-center justify-center' >
+          <div>
+            <div className='w-[500px] mx-auto mb-20 flex justify-between up1' >
+              <PiStudentDuotone size={200} />
+              <PiChalkboardTeacher size={200}/>
+            </div>
+            <p className='w-full h-auto text-center text-36 mb-10 up2'>회원가입 시 <strong className="bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent" >멘티</strong>, 수업 개설 시 <strong className="bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent">멘토와 멘티</strong> 모두 가능!</p>
           </div>
-          <p className='w-full h-auto text-center text-36 up2'>회원가입 시 <strong className="bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent" >멘티</strong>, 수업 개설 시 <strong className="bg-gradient-to-r to-[#382A83] from-primary bg-clip-text text-transparent">멘토와 멘티</strong> 모두 가능!</p>
-        </section>
+        </div>
 
       {/* 멘토 랭킹 */}
-        <section className='w-800 mx-auto my-450 trigger2'  >
-          <h1 className='h2 text-end text-[#291F5C] up3'>멘토 랭킹</h1>
-          <p className='pt-2 text-20 text-end mb-20 up3'>포인트를 많이 획득할수록 순위가 높아집니다!</p>
-          <div className='w-full flex justify-between items-end up4'>
-            <div className="flex flex-col items-center">
-              <GiCrenelCrown  size={85} className="text-silver"/>
-              <div className='w-52 py-5 border-2 border-silver rounded-2xl shadow-md shadow-silver'>
-                <ProfileModal imagesize={20} username="2등" point={400} />
-                <p className='mt-6 text-24 text-center'>2000P</p>
+        <section className='my-200 flex justify-center items-center py-10 trigger2' >
+          <div>
+            <h1 className='h2 text-end text-[#291F5C] up3'>멘토 랭킹</h1>
+            <p className='pt-2 text-20 text-end mb-20 up3'>포인트를 많이 획득할수록 순위가 높아집니다!</p>
+            <div className='w-800 flex justify-between items-end up4'>
+              <div className="flex flex-col items-center">
+                <GiCrenelCrown  size={85} className="text-silver"/>
+                <div className='w-52 py-5 border-2 border-silver bg-white rounded-2xl shadow-md shadow-silver'>
+                  <ProfileModal imagesize={20} username="2등" point={400} />
+                  <p className='mt-6 text-24 text-center'>2000P</p>
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col items-center">
-              <GiCrenelCrown  size={110} className="text-gold"/>
-              <div className='w-60 py-5 border-2 border-gold rounded-2xl shadow-md shadow-gold '>
-                <ProfileModal imagesize={24} username="1등" point={200} />
-                <p className='mt-12 text-24 text-center'>2000P</p>
+              <div className="flex flex-col items-center">
+                <GiCrenelCrown  size={110} className="text-gold"/>
+                <div className='w-60 py-5 border-2 border-gold bg-white rounded-2xl shadow-md shadow-gold '>
+                  <ProfileModal imagesize={24} username="1등" point={200} />
+                  <p className='mt-12 text-24 text-center'>2000P</p>
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col items-center">
-              <GiCrenelCrown  size={85} className="text-bronze"/>
-              <div className='w-52 py-5 border-2 border-bronze rounded-2xl shadow-md shadow-bronze '>
-                <ProfileModal imagesize={20} username="3등" point={100} />
-                <p className='mt-6 text-24 text-center'>2000P</p>
+              <div className="flex flex-col items-center">
+                <GiCrenelCrown  size={85} className="text-bronze"/>
+                <div className='w-52 py-5 border-2 border-bronze bg-white rounded-2xl shadow-md shadow-bronze '>
+                  <ProfileModal imagesize={20} username="3등" point={100} />
+                  <p className='mt-6 text-24 text-center'>2000P</p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
       {/* 과외 신청하기 */}
-        <section className='w-800 mx-auto my-450 trigger3 ' >
+        <section className='w-800 mx-auto my-200 trigger3' >
           <h1 className='h2 text-[#291F5C] up5'>과외 신청하기</h1>
           <p className='pt-2 text-20 mb-20 up5'>훌륭한 멘토님들을 살펴보고 과외 신청을 해보세요!</p>
             <div className="slider-container up6">
