@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { cn } from '@/lib/utils';
-import ProfileImg from '@/components/Profile/ProfileImg';
 
 export interface RankBoxProps {
   rank: number;

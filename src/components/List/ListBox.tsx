@@ -81,10 +81,10 @@ const ListBox: React.FC<ListBoxProps> = ({
           <div className="w-24">{method}</div>
           <div className="w-20">{meeting}</div>
           <button
-            className="box-sizing border-box flex justify-center items-center gap-10 w-16 h-8 bg-white border-3 border-[#7C6DD1] rounded-full w-20"
+            className="box-sizing border-box flex justify-center items-center gap-10 w-16 h-8 bg-white border-3 border-primary hover:border-[#6153b1] rounded-full w-20 transition-all duration-200"
             onClick={handleButtonClick}
           >
-            <span className="text-[#7C6DD1] text-12">신청하기</span>
+            <span className="text-primary text-12 hover:text-[#6153b1] transition-all duration-200">신청하기</span>
           </button>
         </div>
       </div>
