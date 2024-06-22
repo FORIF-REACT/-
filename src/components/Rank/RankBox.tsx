@@ -20,7 +20,7 @@ const RankBox: React.FC<RankBoxProps> = ({ rank, point, name, tier }) => {
     <div className={cn('items-center justify-center')}>
       <div
         className={cn(
-          'border-[#717D8D] bg-[#FBFDFF] box-border border rounded-[10px] filter drop-shadow-[0_0_10px_rgba(0,0,0,0.1)] w-[720px] h-[64px] flex items-center'
+          'border-[#cdd6e2] bg-[#FBFDFF] box-border border rounded-[10px] filter drop-shadow-[0_0_10px_rgba(0,0,0,0.1)] w-[720px] h-[64px] flex items-center'
         )}
       >
         <h1 className="font-normal text-[20px] ml-[24px]">{rank}</h1>
