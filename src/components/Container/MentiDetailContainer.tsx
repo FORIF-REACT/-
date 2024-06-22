@@ -2,6 +2,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"; // ShadCN의 Scroll Ar
 import ProfileImg from "../Profile/ProfileImg";
 
 interface MentiProfile {
+  point: number
   username: string;
   gender: string;
   admissionYear: number;
@@ -18,6 +19,7 @@ interface MentiProfile {
 }
 
 const MentiDetailContainer: React.FC<MentiProfile> = ({
+  point,
   username,
   gender,
   admissionYear,
@@ -40,7 +42,7 @@ const MentiDetailContainer: React.FC<MentiProfile> = ({
         {/* 프로필 사진(닉네임) 컨테이너 */}
         <div className="w-[72px] h-[96px] bg-[#FBFDFF] flex flex-col items-center ml-[20px] mt-[8px]">
           {/* 프로필 사진 */}
-          <ProfileImg size={10} point={100} /> {/* point 변수를 profileImage로 받기 */}
+          <ProfileImg size={10} point={point} /> {/* point 변수를 profileImage로 받기 */}
           {/* 닉네임 */}
           <span className="mt-[8px] text-[16px] font-normal text-[#000000]">{username}</span>
         </div>

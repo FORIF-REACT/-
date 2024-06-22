@@ -6,6 +6,7 @@ import SideMenu from "@/components/Profile/SideMenu";
 const profiles = [
   {
     username: "사용자1",
+    point: 90,
     gender: "여성",
     admissionYear: 2021,
     major: "공과대학 산업공학과",
@@ -15,6 +16,7 @@ const profiles = [
   },
   {
     username: "사용자2",
+    point: 200,
     gender: "남성",
     admissionYear: 2020,
     major: "공과대학 산업공학과",

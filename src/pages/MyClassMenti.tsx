@@ -3,6 +3,7 @@ import SideMenu from "@/components/Profile/SideMenu";
 
 const profiles = [
   {
+    point: 300,
     profileImage: "path/to/image1.jpg",
     username: "사용자1",
     gender: "여성",
@@ -19,6 +20,7 @@ const profiles = [
     applyContent: "공업수학1을 배우고 싶습니다"
   },
   {
+    point: 200,
     profileImage: "path/to/image2.jpg",
     username: "사용자2",
     gender: "남성",

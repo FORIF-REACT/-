@@ -9,6 +9,7 @@ interface Profile {
   preferRegion: string;
   lectureName: string;
   applyContent: string;
+  point: number;
 }
 
 const MentorDetailContainerIng: React.FC<Profile> = ({
@@ -19,6 +20,7 @@ const MentorDetailContainerIng: React.FC<Profile> = ({
   preferRegion,
   lectureName,
   applyContent,
+  point
 }) => {
   return (
     <div className="min-w-[352px] min-h-[478px] bg-[#FBFDFF] mr-[31px] relative rounded-[7px] shadow-md">
@@ -28,7 +30,7 @@ const MentorDetailContainerIng: React.FC<Profile> = ({
         {/* 프로필 사진(닉네임) 컨테이너 */}
         <div className="w-[72px] h-[96px] bg-[#FBFDFF] flex flex-col items-center ml-[20px] mt-[22px]">
           {/* 프로필 사진 */}
-          <ProfileImg size={10} point={100} />
+          <ProfileImg size={10} point={point} />
           {/* 닉네임 */}
           <span className="mt-[8px] text-[16px] font-normal text-[#000000]">{username}</span>
         </div>
