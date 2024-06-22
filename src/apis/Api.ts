@@ -75,10 +75,11 @@ export const postLoginInfo = async (userInfo: LoginInfo) => {
 // 과외 신청
 interface ApplyInfo {
   email: string;
+  lectureId: number
   applyContent: string;
 }
 
-export const postlectureApply = async (userInfo: ApplyInfo) => {
+export const postLectureApply = async (userInfo: ApplyInfo) => {
   const path=`/apply`;
   return await post<ApplyInfo>(path, userInfo);
 };
@@ -89,18 +90,20 @@ interface receivedApplicationRequest {
   status: string;
 }
 
-interface LectureResponse {
+interface receivedApplicationResponse {
   email: string;
   profileImg: unknown;
-  point: number;
+  gender: string;
+  major: string
   username: string;
-  mentorRank: number;
+  lectureName: string;
+  admissionYear: number;
 }
 
 export const getReceivedApplication = async (email: string, status: string) => {
   const path = "/myclassmentor";
   const params = { email, status };
-  return await get<receivedApplicationRequest, LectureResponse>(path, params);
+  return await get<receivedApplicationRequest, receivedApplicationResponse[]>(path, params);
 };
 
 // 내 수업 - 멘토 - 신청 수락
@@ -136,6 +139,7 @@ interface AppliedLectureRequest {
 }
 
 interface AppliedLectureResponse {
+  lectureId: number;
   email: string;
   username: string;
   profileImg: unknown;
@@ -153,7 +157,7 @@ interface AppliedLectureResponse {
 }
 
 export const getAppliedLecture = async (email: string, status: string) => {
-  const path = "/myclass/menti";
+  const path = "/myclassmenti";
   const params = { email, status };
   return await get<AppliedLectureRequest, AppliedLectureResponse>(path, params);
 };
@@ -186,10 +190,18 @@ interface MentorListRequest {
 interface MentorListResponse {
   email: string;
   username: string;
+  admissionYear: number;
+  major: string;
+  lecture: string;
+  gender: string;
+  preferRegion: string;
+  lectureType: string;
+  meetType: string;
   profileImg: unknown;
   point: number;
-  
-  mentorRank: number;
+  lectureContent: string;
+  preferTime: string;
+  numberOfClasses: number;
 }
 
 export const getMentorListInfo = async (email: string) => {
@@ -230,6 +242,7 @@ export const getMentorReview = async (email: string) => {
 // post 평가하기 - 멘토
 interface mentorReviewInfo {
   email: string;
+  lectureId: number;
   Professional: boolean;
   goodTeaching: boolean;
   mentorPreparation: boolean;
@@ -238,7 +251,7 @@ interface mentorReviewInfo {
 }
 
 export const postMentorReview = async (userInfo: mentorReviewInfo) => {
-  const path=`/apply/mentor`;
+  const path=`/evaluation/mentor`;
   return await post<mentorReviewInfo>(path, userInfo);
 };
 
@@ -266,7 +279,7 @@ interface mentiReviewResponse {
 }
 
 export const getMentiReview = async (email: string) => {
-  const path = "/evaluation/mentor";
+  const path = "/evaluation/menti";
   const params = { email };
   return await get< mentiReviewRequest, mentiReviewResponse >(path, params);
 };
@@ -274,14 +287,58 @@ export const getMentiReview = async (email: string) => {
 // post 평가하기 - 멘티
 interface mentiReviewInfo {
   email: string;
-  Professional: boolean;
-  goodTeaching: boolean;
-  mentorPreparation: boolean;
-  gradeGuarantee: boolean;
-  mentorPunctual: boolean;
+  menteePunctual: boolean;
+  menteeDeligence: boolean;
+  activeness: boolean;
 }
 
 export const postMentiReview = async (userInfo: mentiReviewInfo) => {
-  const path=`/apply/mentor`;
+  const path=`/evaluation/menti`;
   return await post<mentiReviewInfo>(path, userInfo);
+};
+
+// 강의 조회
+interface LectureRequest {
+  lectureId: number;
+}
+
+interface LectureResponse {
+  username: string;
+  profileImg: unknown;
+  gender: string;
+  admissionYear: number;
+  major: string;
+  preferRegion: string;
+  lectureName: string;
+  lectureType: string;
+  meetType: string;
+  lectureContent: string;
+  preferDay: string;
+  preferTime: string;
+  numberOfClasses: number;
+  applyContent: string;
+  status: string;
+}
+
+export const getLecture = async ( lectureId: number ) => {
+  const path = "/lectures";
+  const params = { lectureId };
+  return await get< LectureRequest, LectureResponse >(path, params);
+};
+
+// 강의 생성
+interface MentorInfo {
+  email: string;
+  lectureName: string;
+  lectureType: string;
+  meetType: string;
+  lectureContent: string;
+  preferDay: string;
+  preferTime: number;
+  numberOfClasses: number;
+}
+
+export const postMentorProfile = async (userInfo: MentorInfo) => {
+  const path=`/lectures`;
+  return await post<MentorInfo>(path, userInfo);
 };
